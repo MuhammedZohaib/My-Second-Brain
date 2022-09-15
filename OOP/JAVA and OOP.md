@@ -76,9 +76,98 @@ Pascal case is used for classes and camel case of variables.
 
 we Use `%s` for string as format specifier.
 
-## Printf:
-	//This is used to print only string
-	System.out.println("Hello");
+## Input:
+```java
+//This is used to print only string
+System.out.println("Hello");
 
-	//This can be used to print variables and other datatypes
-	System.out.printf("Hello %s", String[]);
+//This can be used to print variables and other datatypes
+System.out.printf("Hello %s", String[]);
+
+```
+## Output:
+```Java
+/*we can use this to do mathematical claculations and print in terminal as output*/
+System.out.println(3 + 3);
+```
+
+we can also use 
+```java
+System.out.print("Hello World! ");
+```
+
+# Variables:
+Following are the datatypes:
+* `String`
+* `int`
+* `float`
+* `char`
+* `boolean`
+
+## Declaring a variable:
+```java
+type variableName = value;
+```
+As,
+```java
+String name = "John";
+System.out.println(name);
+```
+ we can create a variable that can store numbers we can approach as:
+```java
+int myNum = 15;
+System.out.println(myNum);
+```
+
+if we want to create a constant variable then we use `final` keyword.
+```java
+final int myNum = 15;
+//The value of myNum can't be changed it'll always be 15.
+```
+
+Other examples of variables are:
+```java
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
+```
+
+# Displaying Varibales:
+We use `println` to display variables and use + symbol for concatenation.
+
+```java
+String name = "John";
+System.out.println("Hello " + name);
+```
+
+further on concatenation :
+
+```java
+String firstName = "John ";
+String lastName = "Doe";
+String fullName = firstName + lastName;
+System.out.println(fullName);
+```
+
+for displaying variable we use formatted print method as:
+```java
+public class DisplayVariable{
+	public static void main(String[] args){
+		int x = 1;
+		int y = 2;
+		int sum;
+		sum = x + y;
+		System.out.printf("The sum of %d and %d is %d\n", x, y, sum);
+	}
+}
+```
+
+We can declare multiple variables separated by commas , as:
+
+```java
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);
+```
+
