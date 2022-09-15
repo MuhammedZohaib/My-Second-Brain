@@ -171,3 +171,136 @@ int x = 5, y = 6, z = 50;
 System.out.println(x + y + z);
 ```
 
+we can assign multiple variables same value by using = sign as:
+
+```java
+int x, y, z;
+x = y = z = 50;
+System.out.println(x + y + z);
+//Output will be 150
+```
+
+All variable should be given unique names which are known as identifiers.
+
+# DataTypes:
+```java
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+```
+
+There are two types of data types:
+* Primitive DataTypes
+* Non-Primitive DataTypes
+
+### Primitive DataTypes:
+-> `byte` 1-byte
+-> `short` 2-bytes
+-> `int` 4-bytes
+-> `long` 8-bytes
+->`float` 4-bytes
+->`double` 8-bytes
+->`boolean` 1-bit
+->`char`  2-byte
+
+These are further divided into two types:
+* Integer Types `byte` `short` `int` `long` 
+* Floating Types `float` `double`
+
+#### Byte:
+Can store values from -128 to 127. It can be used instead of int to save memory.
+
+#### Short:
+The `short` data type can store whole numbers from -32768 to 32767.
+
+#### Int:
+The `int` data type can store whole numbers from -2147483648 to 2147483647.
+
+#### Long:
+The `long` data type can store whole numbers from -9223372036854775808 to 9223372036854775807.
+**Important:**
+```java
+long myNum = 15000000000L;
+```
+
+#### Float and Double:
+The `float` and `double` data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles.
+```java
+float myNum = 5.75f;
+```
+```java
+double myNum = 19.99d;
+```
+
+A floating point number can also be a scientific number with an "e" to indicate the power of 10.
+
+#### Boolean Type:
+A boolean data type is declared with the `boolean` keyword and can only take the values `true` or `false`.
+```java
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // Outputs true
+System.out.println(isFishTasty);   // Outputs false
+```
+
+#### Characters:
+The `char` data type is used to store a **single** character. The character must be surrounded by single quotes, like 'A' or 'c'.
+```java
+char myGrade = 'B';
+System.out.println(myGrade);
+```
+
+Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:
+```java
+char myVar1 = 65, myVar2 = 66, myVar3 = 67;
+System.out.println(myVar1);
+System.out.println(myVar2);
+System.out.println(myVar3);
+```
+
+#### Strings:
+The `String` data type is used to store a sequence of characters (text). String values must be surrounded by double quotes.
+
+```java
+String greeting = "Hello World";
+System.out.println(greeting);
+```
+
+
+
+### Non-Primitive DataTypes:
+Non-primitive data types are called **reference types** because they refer to objects.
+The main difference between **primitive** and **non-primitive** data types are:
+-   Primitive types are predefined (already defined) in Java. Non-primitive types 
+ are created by the programmer and is not defined by Java (except for `String`).
+-   Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+-   A primitive type has always a value, while non-primitive types can be `null`.
+-   A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+-   The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+
+Examples of non-primitive types are [Strings](https://www.w3schools.com/java/java_strings.asp), [Arrays](https://www.w3schools.com/java/java_arrays.asp), [Classes,](https://www.w3schools.com/java/java_classes.asp) [Interface](https://www.w3schools.com/java/java_interface.asp), etc. You will learn more about these in a later chapter.
+
+->`String`
+->`Arrays`
+->`Classes`
+->`Object`
+->`Interface`
+
+
+# Java Type Casting
+
+Type casting is when you assign a value of one primitive data type to another type.
+In Java, there are two types of casting:
+-   **Widening Casting** (automatically) - converting a smaller type to a larger type size  
+    `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`  
+-   **Narrowing Casting** (manually) - converting a larger type to a smaller size type  
+    `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
+
+
+
+
+
+
+
