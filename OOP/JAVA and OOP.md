@@ -288,6 +288,20 @@ Examples of non-primitive types are [Strings](https://www.w3schools.com/java/jav
 ->`Object`
 ->`Interface`
 
+#### Java Strings:
+Strings are used for storing text.
+A `String` variable contains a collection of characters surrounded by double quotes.
+```java
+String greeting = "Hello";
+```
+ 
+### String Methods:
+* `.lenght()`  It gives you the lenght of the string.
+* `.toUpperCase()` Converts string to UpperCase
+* `.toLowerCase()` Converts string to LowerCase
+* `.indexOf("Part of String")` Gives the Index Number of specific text in String
+* `.concate()` sum up two strings
+
 
 # Java Type Casting
 
@@ -301,6 +315,141 @@ In Java, there are two types of casting:
 
 
 
+# Inserting Special Chracters:
+* `\'` This will insert single quote
+* `\"` This will insert double quote
+* `\\` This will insert Backslash
+* `\n` New line
+* `\r` Moves cursor to start of line
+* `\t` Tab Spacing
+* `\b` Backspace
+* `\f` Form Feed
 
+# Java Math:
+* `Math.max(x,y)` It is used to find maximum of two values
+* `Math.min(x,y)` It is used to find minimum of two values
+* `Math.sqrt(x)` It gives square root of a value
+* `Math.abs(x)` It converts negative values to positive values
+* `Math.random()` It will generate a random number between 0.0 and 1.0
 
+# Java Booleans:
+The Boolean value of an expression is the basis for all Java comparisons and conditions.
 
+# Java If...Else:
+Supported Conditions:
+* `a < b`
+* `a <= b`
+* `a > b`
+* `a >=b`
+* `a == b`
+* `a != b`
+
+Java has the following conditional statements:
+* `if`
+* `else`
+* `else if`
+* `switch`
+
+## Terniary Operator:
+```java
+variable = (condition) ? expressionTrue :  expressionFalse;
+```
+
+```java
+String result = (time < 18) ? "Good day." : "Good evening.";
+```
+
+# Switch:
+```java
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+# While:
+The number of loop through the code is not defined in while loop
+```java
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+```
+# DO While:
+```java
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+# For Loop:
+When you know exactly how many times you want to loop through a block of code, use the `for` loop instead of a `while` loop:
+```java
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+```
+
+```java
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+```
+
+# For Each Loop:
+There is also a "**for-each**" loop, which is used exclusively to loop through elements in an arrays:
+```java
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+```
+
+```java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+```
+
+## Java Arrays
+
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To declare an array, define the variable type with **square brackets**:
+```java
+String[] cars;
+```
+```java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+```
+```java
+int[] myNum = {10, 20, 30, 40};
+```
+ We can access the number of elements of the string by using index number.
+ The number of element in an array is known as index number.
+ It starts with 0.
+  
+## Two Dimensional Arrays:
+A multidimensional array is an array of arrays.
+To create a two-dimensional array, add each array within its own set of **curly braces**:
+```java
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+```
+**myNumbers** is now an array with two arrays as its elements.
+To access the elements of the **myNumbers** array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:
+
+```java
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+int x = myNumbers[1][2];
+System.out.println(x); // Outputs 7
+```
+
+  
