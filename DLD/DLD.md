@@ -28,3 +28,4 @@ The basic demonstartion of logic 0 and 1 can be understood as:
 
 The graph is usually square waveform.
 
+

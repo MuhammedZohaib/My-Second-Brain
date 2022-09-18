@@ -1,16 +1,19 @@
- # DOM
+# DOM:
+
 DOM stands for document object model. It can be thought of as a tree model of your html created by the browser and Javascript can be used to read, write and manipulate the DOM. An interface for changing the content of a web page.
 It's arranged in a hierarchical tree. DOM is the representation of an html document.
 It is object oriented which means that each node has its own methods and properties.
 The browser gives us a main window object which is the browser itself then we have document object in it which further root element and so on.
 Technically it's an API(Application programming InterFace);
 
-	console.dir(document);
-
+```DOM
+console.dir(document);
+```
 This command will show all the properties and methods which are part of document object.
 
 ## Important properties of DOM:
 
+```Document Object Model
 	console.log(document.domain);
 	console.log(document.URL);
 	console.log(document.title);
@@ -21,8 +24,11 @@ This command will show all the properties and methods which are part of document
 	console.log(document.forms);
 	console.log(document.links);
 	console.log(document.images);
+```
+
 
 ## DOM Selectors:
+```DOM
 	document.getElementById('id_name_hre');
 	document.getElementByName('name_attribute of input tag');
 	document.getElementByTagName('li');
@@ -35,10 +41,9 @@ This command will show all the properties and methods which are part of document
 	document.body.nextElementSibling;
 	document.body.previousElementSibling;
 	document.body.children[];
-	
-
 	let children = Array.form(element.children);
 	children.forEach(child => child.sttyle.background = "lightgreen");
+```
 
 # Traversing the DOM:
 * .parentNode
@@ -50,18 +55,22 @@ This command will show all the properties and methods which are part of document
 * .**innerHTML = 'block_of_code_here'**            You can use it for inserting block of code with Javascript
 * .createElement('element_name');
 
-		const nameTag = document.creatElement("h1");
-		nameTag.textContent = window.prompt("Enter Your Name");
-		document.body.append(nameTag);
+```
+	const nameTag = document.creatElement("h1");
+	nameTag.textContent = window.prompt("Enter Your Name");
+	document.body.append(nameTag);
+```
 
 * .prepend()   append()
   prepend to add at start
   append to add at last
 
-		const myList = document.querySelector("#fruits");
-		const listItem = document.createElement("li");
-		listItem.textContent = "mango";
-		myList.append(listItem);
+```
+	const myList = document.querySelector("#fruits");
+	const listItem = document.createElement("li");
+	listItem.textContent = "mango";
+	myList.append(listItem);
+```
 
 # CSS Styling with DOM
 
@@ -97,11 +106,13 @@ Even the same event that invokes different functions.
 If two elements are overlapping and listening to same type of event then we can use `true`  or `false` for giving preference to event as third option in the event listner.
 
 # Key Listners
+```DOM
 	window.addEventListner("keydown", function());
-
+```
 # Canvas API:
 A means for drawing graphics, Used for animations, games, data visualization.
 
+```DOM
 	//first make a canvas tag in html
 	
 	let canvas = document.getElementById("myCanvas");
@@ -121,11 +132,10 @@ A means for drawing graphics, Used for animations, games, data visualization.
 	context.arc(100,100,100,0 2* Math.PI);
 	context.fillText = ()"text here, x , y");
 	context.fillText;
-	
+```
 
 ## making a triangle:
-
-
+```DOM
 	context.beginPath();
 	context.moveTo(250, 0);
 	context.linetTo(0,250);
@@ -133,11 +143,13 @@ A means for drawing graphics, Used for animations, games, data visualization.
 	context.linetTo(250,0);
 	 context.fill();
 
+```
 
 # Window Object:
 Interface used to talk with the web browser.
 The DOM is the property of window.
 
+```DOM
 	console.dir(window);
 
 	window.innerWidth;
@@ -160,6 +172,8 @@ The DOM is the property of window.
 	window.alert();
 	window.confirm();
 	window.prompt(); 
+```
+
 
 
 # Cookies:
@@ -169,6 +183,7 @@ A small text file stored on your computer used to remember information about the
 	
 
 ## Making New Cookie:
+```DOM
 	document.cookie = "firstName = Zohaib; epires= Sun 1 Jan 2030 12:00:00 UTC; path=/;
 	document.cookie = "lastname=Ali; epires= Sun 1 Jan 2030 12:00:00 UTC; path=/";
 
@@ -179,3 +194,4 @@ A small text file stored on your computer used to remember information about the
 	let expires = "expires=" + date.toUTCString();
 	document.cookie = `${name}=${value}; ${expires}; path=/`;
 	}
+```
