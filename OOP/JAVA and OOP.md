@@ -77,6 +77,8 @@ Pascal case is used for classes and camel case of variables.
 we Use `%s` for string as format specifier.
 
 ## Input:
+`println`  has new line.
+
 ```java
 //This is used to print only string
 System.out.println("Hello");
@@ -97,6 +99,7 @@ System.out.print("Hello World! ");
 ```
 
 # Variables:
+In Java Variables are known as Data Members.
 Following are the datatypes:
 * `String`
 * `int`
@@ -331,6 +334,7 @@ In Java, there are two types of casting:
 * `Math.sqrt(x)` It gives square root of a value
 * `Math.abs(x)` It converts negative values to positive values
 * `Math.random()` It will generate a random number between 0.0 and 1.0
+* `Math.pow(x,2)` It will give us power of a number x
 
 # Java Booleans:
 The Boolean value of an expression is the basis for all Java comparisons and conditions.
@@ -452,4 +456,165 @@ int x = myNumbers[1][2];
 System.out.println(x); // Outputs 7
 ```
 
-  
+# Object Creation:
+
+```java
+Animal a = new Animal();
+```
+
+ We use . notation to call data members and methods of an object.
+
+# Package Keyword:
+Makes whole code as a package.
+
+```java
+Package class_name;
+```
+
+# Import Keyword:
+```java
+import java.*;
+```
+
+# Bitwise Operators:
+* `~` Compliment
+* `&` and
+* `|` or
+* `^` xor
+* `<<` Shift two bits to left
+* `>>` Shift two bits to right
+
+# Java Methods:
+A **method** is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a method.
+Methods are used to perform certain actions, and they are also known as **functions**.
+Why use methods? To reuse code: define the code once, and use it many times.
+
+Create a method inside Main:
+
+```java
+public class Main {
+  static void myMethod() {
+    // code to be executed
+  }
+}
+```
+
+# Java Method Parameters:
+Information can be passed to methods as parameter. Parameters act as variables inside the method.
+
+```java
+public class Main {
+  static void myMethod(String fname, int age) {
+    System.out.println(fname + " is " + age);
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam", 5);
+    myMethod("Jenny", 8);
+    myMethod("Anja", 31);
+  }
+}
+```
+
+The `void` keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as `int`, `char`, etc.) instead of `void`, and use the `return` keyword inside the method:
+
+# Java Method Overloading:
+With **method overloading**, multiple methods can have the same name with different parameters:
+
+```java
+static int plusMethod(int x, int y) {
+  return x + y;
+}
+
+static double plusMethod(double x, double y) {
+  return x + y;
+}
+
+public static void main(String[] args) {
+  int myNum1 = plusMethod(8, 5);
+  double myNum2 = plusMethod(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+```
+
+Multiple methods can have the same name as long as the number and/or type of parameters are different.
+
+# Java Scope:
+In Java, variables are only accessible inside the region they are created. This is called **scope**.
+
+## Block Scope:
+A block of code refers to all of the code between curly braces `{}`.
+Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    // Code here CANNOT use x
+
+    { // This is a block
+
+      // Code here CANNOT use x
+
+      int x = 100;
+
+      // Code here CAN use x
+      System.out.println(x);
+
+   } // The block ends here
+
+  // Code here CANNOT use x
+
+  }
+}
+```
+
+In Simple words we can say that there are ni global variiables in Java.
+
+# Java Recursion:
+Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.
+
+# Relational Operators:
+* `==`
+* `<`
+* `>`
+* `>=`
+* `<=`
+* `!=`
+
+# Java Classes/Objects
+
+Java is an object-oriented programming language.
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has **attributes**, such as weight and color, and **methods**, such as drive and brake.
+
+A Class is like an object constructor, or a "blueprint" for creating objects
+
+```java
+public class Main {
+  int x = 5;
+}
+``````java
+public class Main {
+  int x = 5;
+}
+```
+
+
+Remember from the [Java Syntax chapter](https://www.w3schools.com/java/java_syntax.asp) that a class should always start with an uppercase first letter, and that the name of the java file should match the class name.
+
+Create an object called "`myObj`" and print the value of x:
+
+```java
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+```
+
