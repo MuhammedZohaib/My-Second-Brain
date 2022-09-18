@@ -82,20 +82,29 @@ This command will show all the properties and methods which are part of document
 *  .style.display = "" ;
 
 # Events
-* .onclick
-* .onload
-* .onchange
-* .onmouseover
-* .onmouseout 
-* .onmousedown
-* .onmouseup 
-* .mouseenter
-* .mouseleave
-* .click
-* .dblclick
-* .mouseover
-* .mouseout
-* .mousemove
+* onclick
+* onchange
+* onmouseover
+* onmouseout 
+* onmousedown
+* onmouseup 
+* mouseenter
+* mouseleave
+* click
+* dblclick
+* mouseover
+* mouseout
+* mousemove
+* keydown
+* keyup
+* keypress
+* focus
+* blur
+* cut
+* paste
+* input
+* change
+* submit
 
 
 # EventListners
@@ -150,6 +159,7 @@ Interface used to talk with the web browser.
 The DOM is the property of window.
 
 ```DOM
+
 	console.dir(window);
 
 	window.innerWidth;
@@ -195,3 +205,30 @@ A small text file stored on your computer used to remember information about the
 	document.cookie = `${name}=${value}; ${expires}; path=/`;
 	}
 ```
+
+# Event Object:
+We pass an event parameter in the method.
+
+```JS
+var button = document.getElementById('button');
+button.addEventListner('click', butttonClick)
+function buttonClick(e){
+//something here
+//console.log(e);
+e.target;
+e.target.id;
+e.target.className;
+e.target.classList;
+e.type;
+e.clientX; //positon of mouse from browser window X-axis
+e.clientY; //positon of mouse from browser window Y-axis
+e.offsetX; //positon of mouse from element X-axis
+e.offsetY; //positon of mouse from element Y-axis
+e.altKey;
+e.ctrlKey;
+e.shiftKey;
+e.preventDefault();
+}
+```
+
+It is advised to use the `keydown` function while using events on input fields.
