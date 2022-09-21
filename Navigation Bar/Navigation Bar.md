@@ -2,6 +2,7 @@ Navigation Bar Is an essential part of any website here we'll look how we can ma
 
 ## Simple Structure of a NavBar in Html
 
+```html
 	<header>
 		<img src=""> !--Logo--!
 		<nav>
@@ -24,12 +25,20 @@ Navigation Bar Is an essential part of any website here we'll look how we can ma
 			<ul>
 		</nav>
 	</header>
+```
+
 
 
 ## Styling In CSS:
-If there is scrolling on our html document then we must want $$position:Fixed$$On our navigation bar so it stick to the top and available for access despite of the scrolling.
+If there is scrolling on our html document then we must want 
+```CSS
+position:Fixed
+```
+On our navigation bar so it stick to the top and available for access despite of the scrolling.
 we'll also try to use min() function for padding so it'll choose the minimum of two available paddings in min() function.
-$$ padding: min(30vh, 10rem), 2em; $$
+```CSS
+padding: min(30vh, 10rem), 2em; 
+```
 For making our navigation responsive we must use media queries.
 We'll use max-width media query at 560px or 35em So when the mobile view will be limited to max screen size of 560px or 35em.
 For desktop view we'll also use a min-width media at 768px.
@@ -41,6 +50,7 @@ we'll select the attribute src of the image and set it to close icon using condt
 
 ## Javascript Logic
 
+```JS
 	const button = document.querySelector("#button");
 	const nav = document.querySelector(".navigation");
 	const list = nav.classList;
@@ -56,3 +66,4 @@ we'll select the attribute src of the image and set it to close icon using condt
     }
 	
 	});
+```

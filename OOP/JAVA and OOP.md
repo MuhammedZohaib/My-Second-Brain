@@ -619,3 +619,87 @@ public class Main {
 }
 ```
 
+# Static Vs Public:
+Attributes and methods can have either `static`  or `public`
+`static` means it can be called form the main function without creating a new object of the `class` while `public` methods can only be accessed by objects.
+
+```java
+public class Main {
+  // Static method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+
+  // Public method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+  // Main method
+  public static void main(String[] args) {
+    myStaticMethod(); // Call the static method
+    // myPublicMethod(); This would compile an error
+
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method on the object
+  }
+}
+```
+
+
+## Calling Methods:
+The dot (`.`) is used to access the object's attributes and methods.
+To call a method in Java, write the method name followed by a set of parentheses **()**, followed by a semicolon (`;`).
+A class must have a matching filename (`Main` and **Main.java**).
+
+# Java Consturctors:
+A constructor in Java is a **special method** that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
+
+```java
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+// Outputs 5
+```
+
+**Important:**
+Note that the constructor name must **match the class name**, and it cannot have a **return type** (like `void`).
+Also note that the constructor is called when the object is created.
+All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.
+
+## Constructor Parameters
+
+Constructors can also take parameters, which is used to initialize attributes.
+
+The following example adds an `int y` parameter to the constructor. Inside the constructor we set x to y (x=y). When we call the constructor, we pass a parameter to the constructor (5), which will set the value of x to 5:
+
+```java
+public class Main {
+  int x;
+
+  public Main(int y) {
+    x = y;
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(5);
+    System.out.println(myObj.x);
+  }
+}
+
+// Outputs 5
+```
+
+# JAVA Modifiers:

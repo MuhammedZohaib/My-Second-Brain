@@ -150,7 +150,7 @@ A means for drawing graphics, Used for animations, games, data visualization.
 	context.linetTo(0,250);
 	context.linetTo(500,250);
 	context.linetTo(250,0);
-	 context.fill();
+	context.fill();
 
 ```
 
