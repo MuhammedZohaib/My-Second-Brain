@@ -44,8 +44,8 @@ Import Libraries as Java API.
 ## Phases in Java Programming:
 * Edit 
 * Compile
-* Load
-* Verify
+* Load into memory
+* Bytecode Verification
 * Execute
 
 We use .`java` extension at the end of java file.
@@ -297,13 +297,21 @@ A `String` variable contains a collection of characters surrounded by double quo
 ```java
 String greeting = "Hello";
 ```
- 
+
 ### String Methods:
 * `.lenght()`  It gives you the lenght of the string.
 * `.toUpperCase()` Converts string to UpperCase
 * `.toLowerCase()` Converts string to LowerCase
 * `.indexOf("Part of String")` Gives the Index Number of specific text in String
 * `.concate()` sum up two strings
+* `.string1.equals(string2)` Check wether `string1` is equal to `string2` (Case Sensitive).
+* `.string1.equalsIgnoreCase(string2)` (Not case Sensitive)
+* `.lastIndexOf("")` last occurence of sub string.
+* `.replace("Substring", "New Substring") `
+* `.substring`
+* `.split("-")`
+* `.trim()`  removes extra white spaces form `String`
+* 
 
 
 # Java Type Casting
@@ -703,3 +711,32 @@ public class Main {
 ```
 
 # JAVA Modifiers:
+## Access Modifiers 
+Controls the access levely
+
+-> `class` can either be `public` means available to all or `default` means availble in same package only. `default` is set if we dont specify any access modifier.
+-> For `attributes` `methods` and `constructors` we can use 
+* `public` (The code is accessible for all classes) 
+* `private` (The code is only accessible within the declared class)
+* `default` (The code is only accessible in the same package. This is used when you don't specify a modifier.)
+* `protected` (The code is accessible in the same package and **subclasses**)
+
+
+## Non-Access Modifiers
+Do not control access level, but provides other functionality.
+-> `class` can either be
+* `final` (The class cannot be inherited by other classes)
+* `abstract` (The class cannot be used to create objects. To access an abstract class, it must be inherited from another class)
+-> For `attributes` and `methods`
+* `final` (Attributes and methods cannot be overridden/modified)
+* `static` (Attributes and methods belongs to the class, rather than an object)
+* `abstract` (Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example **abstract void run();**. The body is provided by the subclass (inherited from).)
+* `transient` (Attributes and methods are skipped when serializing the object containing them).
+* `synchronzied` (Methods can only be accessed by one thread at a time)
+* `volatile` (The value of an attribute is not cached thread-locally, and is always read from the "main memory")
+
+->A `static` method means that it can be accessed without creating an object of 
+    the class.
+->An `abstract` method belongs to an `abstract` class, and it does not have a 
+    body.
+

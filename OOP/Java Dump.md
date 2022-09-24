@@ -50,13 +50,24 @@ Non-Primitive datatypes are also known as Reference datatyes.
 The variables in a class are known as attributes.
 To create a String as a attribute we need to make `Constructor` because `String ` is a refrence datatype and is a type of `class`
 
+we can make more than one object from a object.
+
 Difference b/w value type and refrence type.
 
 Write Attributes first and then methods in a class.
 The order doesn't matter in java we can call method anywhere in the class.
 
-
+Once we assign a variable a value through scanner it becomes `static`
 # Constructor:
+There are two types of constructors:
+* Non-Parameterized -> No Parameters
+* Parameterized -> Has Parameters
+
+We can make more than one constructor in a `class`
+
+constructor has the same name as of the `class` name. Constructor is a special method of a class which can take parameters.
+
+
 
 
 
