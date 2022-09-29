@@ -45,3 +45,6 @@ of precedence.
 contains several such operations, the operators are applied from left to
 right. Addition and subtraction operators have the same level of
 precedence.
+
+Never Use `printf` to print a `String` while taking input from the user as it can result in security breach as malicious user can supply format specifier and execute through `printf`
+

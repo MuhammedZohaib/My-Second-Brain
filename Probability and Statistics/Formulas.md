@@ -7,4 +7,12 @@
  **Burge's Formula:**
  This formula is used to make number of classes in Heterogenous type of data.
  1+3.3logN where N is the total number of observations.
- 
+ **Arithematic Mean for Population:**
+ (μ) = ∑X / N
+ **Arithematic Mean for Sample:**
+ X = ∑X / n
+ **For Even Number of Observations:**
+X = {|n/2| th + {|n/2| + 1}th} / 2
+ **For Odd Number of Observations:**
+X = {|n/2| + 1} th observation
+
