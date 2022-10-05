@@ -1,5 +1,5 @@
 # Statistics:
-The branch of mathematical science that deals with the collection of data, organization of data, summerization of data, presentation of data and analysis of data under the face of uncertainityt to make inference about any phenomenon is know as Statistics.
+The branch of mathematical science that deals with the collection of data, organization of data, summerization of data, presentation of data and analysis of data under the face of uncertainity to make inference about any phenomenon is know as Statistics.
 
 **Science** -> To explore, To integrate, To design.
 
@@ -20,19 +20,27 @@ The Branch of statistics that deals with a sample data to draw a conclusion abou
 The collection of things having atleast one common chracteristics is known as Population.
 
 ## Sample: 
-A Subset or part of a population is known as a sample.
+A Subset or part of a population selected for study is known as a sample.
 
 ## Representative Sample:
 A sample that possess all the chracteristics of a population is known as a representative sample.
 
+A sample that represents the characteristics of the population as closely as possible is called a representative sample.
+
 ## Random Sample:
 A sample in which each of a member of a population has a chance to be a part of sample is known as a random sample.
+
+### Simple Random Sample: 
+If all samples of the same size selected from a population have the same chance of being selected, we call it simple random sampling.
 
 ## Census:
 The study of all elements/members of a population is known as census.
 
 ## Sample Survey:
 The study of all elements/members of a sample is known as sample survey.
+
+## Element or Member: 
+An element or member of a sample or population is a specific subject or object (for example, a person, firm, item, state, or country) about which the information is collected.
 
 **GIGO** -> Garbage in Garbage out
 
@@ -53,7 +61,7 @@ We need Information to make decision and draw concolusions.
 **Qunatitative Data:** A variable that can be described numerically.
 1. Discrete Quantitaive Data  
 * Countably Finite -> Students of BCS-B
-* Countably Infinite ->Students in Whole world
+* Countably Infinite -> Students in Whole world
 
 2. Continuous Qualitative Data  
 The variable which is comprised of possible points which exist between A and B on a line.
@@ -100,7 +108,7 @@ It is Represented by 'F'.
 A data is said to have heterogenity if it contains:
 --> Outliers
 --> Trends
--->Clusters
+--> Clusters
 
 ### Outliers:
 An extreme value in data which seems to be non-representative.
@@ -169,3 +177,56 @@ Xo = 5 (Uni-moded)
 
 X2 = {5,5,7,7,8,9,10}
 Xo = 5,7 (Bi-moded)
+
+# Quantiles:
+The distribution of the data into "n" equal parts such that 
+if n=2 the measure is median.
+if n=4 the measure is Quartile.
+if n=10 the measure is Decile.
+
+-> Odd no. of Observations
+-> Even no. of Observations
+
+# Measures of Dispersion:
+The measures used to fixed the intra-variation between a data(for any refrence value e.g A.M, ~X or any arbitrary value).
+
+Player I (x1) | Player II (x2)
+100  | 150
+ 80   | 130
+ 70   | 20
+ 75   | 70
+ 75   | 30
+ Ex = 400 | 400
+
+## Range:
+R = Rmax -Rmin
+Diffrence between two extreme values. Range is suitable for a homogenous 
+data. 
+
+We use absolute measure when we have different units of measure.
+
+## Relative Measure:
+A relative measure is one that has associated unit.
+e.g. Speed -> Km/h
+Labour Efficeincy -> (units / hours)
+Student Efficeincy -> (No. of Questions / hour)
+
+## Absolute Measure:
+A measure which doesn't contain any unit.
+Co-efficient of range measures the degree of variation in the data.
+Variation inversly porpotional to consistency .
+Greater the C.O.R greater will be the variation and consistency will be small.
+
+## Qunatiles Deviation:
+* Quartile Deviation = Q3 - Q1 / Q3 + Q1
+* Decile Deviation = D9 - D1 / D9 + D1
+* Percentile Deviation = P99 - P1 / P99 + P1
+
+## Co-efficient of Variation:
+ C.O.V = standard deviation / -X * 100
+ C.O.V = standard deviation / ~X * 100
+
+### Variance and Standard Deviation:
+Let x1, x2, x3 be the number of observations then the intra-variations in the data can be represented as, by variance:
+
+**For Population:** 

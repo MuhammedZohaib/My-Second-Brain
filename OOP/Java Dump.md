@@ -183,3 +183,45 @@ public int sum(int num1, int num2){ //here num1 and num2 are parameters
 ```java
 	sum(2,3); //here 2,3 are known as arguments
 ```
+
+# Method Overloading:
+-> Type Promotion.
+Same name for methods with different parameters or different dataypes.
+We can also use type promotion along with method overloading.
+We can also overload `main` function.
+
+
+
+# Arrays:
+In Java every array is an object. we can store both primitive and non-primitive data types in it.
+There is no pass by reference in Java. But we can still achieve it.
+The number of rows and column of Arrays is same in C language. But we can also use jagged array in Java which have different number of rows and columns.
+
+* Rectangular Array
+* Jagged Array
+
+Index number should be non-negative
+
+## Declaring An Array:
+```java 
+int [] c = new int [12];
+// Can also be done in two steps
+
+int[] c;
+c = new int [12];
+
+int[] array1,array2;  //both are arrays
+
+int array1[], array2; //array1 is array while array2 is variable
+```
+
+Type array is a refrence to an object.
+
+Partally Filled Arrays.
+Dynamically Filled Arrays.
+Array initializer List.
+
+Simple for loop is known as counter control loop.
+Enhanced for loop can only be used to iterate over the elements of an Array.
+
+`.length`  gives the length of Array.
