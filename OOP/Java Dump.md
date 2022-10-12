@@ -225,3 +225,18 @@ Simple for loop is known as counter control loop.
 Enhanced for loop can only be used to iterate over the elements of an Array.
 
 `.length`  gives the length of Array.
+
+```java
+int [][] arr2D = new int[2][3];
+
+for(int i = 0; i < arr2D.length; i++){
+	for(int j = 0; j < arr2D[i].length; j++){
+	
+	}
+}
+
+for(int[] x: arr2D){
+	for(int y : x){
+	}
+}
+```

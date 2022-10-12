@@ -1,6 +1,8 @@
 # Statistics:
 The branch of mathematical science that deals with the collection of data, organization of data, summerization of data, presentation of data and analysis of data under the face of uncertainity to make inference about any phenomenon is know as Statistics.
 
+Statistics facts and numbers.
+
 **Science** -> To explore, To integrate, To design.
 
 * **Deterministic** -> Outcome is Certain
@@ -29,6 +31,13 @@ A sample that represents the characteristics of the population as closely as pos
 
 ## Random Sample:
 A sample in which each of a member of a population has a chance to be a part of sample is known as a random sample.
+
+## Sampling with Replacement:
+In sampling with replacement, each time we select an element from the population, we put it back in the population before we select the next element. Thus, in sampling with replacement, the population contains the same
+number of items each time a selection is made. As a result, we may select the same item more than once in such a sample.
+
+## Sampling without Replacement:
+Sampling without replacement occurs when the selected element is not replaced in the population. In this case, each time we select an item, the size of the population is reduced by one element
 
 ### Simple Random Sample: 
 If all samples of the same size selected from a population have the same chance of being selected, we call it simple random sampling.
