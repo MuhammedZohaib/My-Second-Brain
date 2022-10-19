@@ -126,13 +126,13 @@ In `static` methods we can simply use the method by using the `class` name.
 className.methodName();
 ```
 
-Shaodow Parameters -> When we use same parameter names in class this is known as Shadow Parameters. We use `this` keyword to refer to the shadow parameters.
+Shadow Parameters -> When we use same parameter names in class this is known as Shadow Parameters. We use `this` keyword to refer to the shadow parameters.
 
 The `static` method belongs to class if we directly change the value in a `static` method it'll change the value of all the associated objects of that `class` while if we make a new object and change the value of that `static` method it'll only change the value of that method of new object.
 method -> `static` is know as instance method.
 
 
-We can use loops to make 100s of objects from a `class` and later store them as a collection.
+We can use loops to make 100's of objects from a `class` and later store them as a collection.
 
 ```java
 int x = 5; //primitive Datatype
@@ -186,7 +186,7 @@ public int sum(int num1, int num2){ //here num1 and num2 are parameters
 
 # Method Overloading:
 -> Type Promotion.
-Same name for methods with different parameters or different dataypes.
+Same name for methods with different parameters or different datatypes.
 We can also use type promotion along with method overloading.
 We can also overload `main` function.
 
@@ -198,7 +198,15 @@ There is no pass by reference in Java. But we can still achieve it.
 The number of rows and column of Arrays is same in C language. But we can also use jagged array in Java which have different number of rows and columns.
 
 * Rectangular Array
-* Jagged Array
+* Jagged Array/ Ragged Array
+
+```java
+//Example of Jagged/ Ragged Array
+BankAccount[][] jArray = new BankAccount[3][];  
+jArray[0] = new BankAccount[1];  
+jArray[1] = new BankAccount[3];  
+jArray[2] = new BankAccount[2];
+```
 
 Index number should be non-negative
 
@@ -215,11 +223,11 @@ int[] array1,array2;  //both are arrays
 int array1[], array2; //array1 is array while array2 is variable
 ```
 
-Type array is a refrence to an object.
+Type array is a reference to an object.
 
-Partally Filled Arrays.
+Partially Filled Arrays.
 Dynamically Filled Arrays.
-Array initializer List.
+Array initialiser List.
 
 Simple for loop is known as counter control loop.
 Enhanced for loop can only be used to iterate over the elements of an Array.
@@ -240,3 +248,73 @@ for(int[] x: arr2D){
 	}
 }
 ```
+
+The `.add()` method in array works as it takes the array as argument takes the length of the array and add the element to the array as the array now has one more index place for element because we added 1 to the `array lenght`
+
+**Auto-Boxing:** Automatic conversion of primitive types to the object of their corresponding wrapper classes is known as auto-boxing.
+
+**Unboxing:** It is just the reverse process of auto-boxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing.
+
+```java
+JOptionPane.showInputDialog();
+//Opens a dialog box like prompt
+```
+
+# Iterator Object:
+It is used to iterate over a collection like Array List
+```java
+Iterator<ObjectsInArrayLists> iterator = arrayLists.iterator();  
+if( control == 'p') {  
+    while(iterator.hasNext()){  
+        System.out.print(iterator.next().toString()+" ");  
+    }  
+}
+```
+
+Java conserves storage by maintaining only one copy of each method per class this method is invoked by every object of the class. Each object, on the other hand, has its own copy of the class’s instance variables.
+
+```java
+throw new IllegalArgumentException("Type Exception Here");
+```
+
+* ***Default values (zero for primitive numeric types, false for
+   boolean values and null for references)**
+
+* *Classes should never have public non-constant data, but declaring data public static final enables you to make constants available to clients of your class.*
+
+* Another common use for access methods is to test whether a condition is true or false—such methods are often called predicate methods. 
+
+>Use a static variable when all objects of a class must use the same copy of the variable.
+>Referring to this in a static method is a compilation error.
+
+```java
+NumberFormat.getCurrencyInstance().format(amount)
+```
+
+# Command Line Arguments:
+```java
+public class Message
+{
+public static void main(String[] args)
+{
+if (args.length == 0 || args[0].equals("-h"))
+System.out.print("Hello,");
+else if (args[0].equals("-g"))
+System.out.print("Goodbye,");
+// print the other command-line arguments
+for (int i = 1; i < args.length; i++)
+System.out.print(" " + args[i]);
+System.out.println("!");
+}
+}
+```
+
+# Making A .jar file:
+```java
+jar cvf jarFileName file1 file2...
+
+```
+
+# Override:
+To change the functionality of a in built method so it work only with the class in which it is overridden.
+

@@ -189,7 +189,7 @@ methods : useful for utility functions.
 
 # ----Inheritance Property----
 
-A child class can inherit all the methods and properties from another class.
+A child class can inherit all the methods and properties from another class known as a parent class.
 
 ## Example:
 
@@ -237,8 +237,7 @@ A child class can inherit all the methods and properties from another class.
 
 
 # ----Super Keyword----
-Refers to the parent class.
-commonly used to invoke the constructor of a parent class.
+Refers to the parent class.commonly used to invoke the constructor of a parent class.
 
 ## Example:
 ```JS
