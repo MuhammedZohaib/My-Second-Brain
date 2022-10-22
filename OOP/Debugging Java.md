@@ -56,10 +56,10 @@ switch (color){
 >Debugging is twice as hard as wiriting the code in the first place. Therefore, if you write the code as cleverly as possible, you are by defination, not smart enough to debug it.
 
 * Small Focused methods vs. one giant method
-* Group with packaes and classes
-* Blank Lines, Identation, Spaces
+* Group with packages and classes
+* Blank Lines, Identification, Spaces
 * See Structure and flow of code
-* Representive variable names
+* Representative variable names
 * Avoid Excessive Abbreviations
 
 **Easier To Read Easier To Debug**
@@ -98,3 +98,27 @@ OutOfMemoryError -> No more heap space available
 **Stop the world Garbage Collection:**
 Program execution is suspended while Garbage collection completes.
 Delay or Longer Response Time
+
+# Try Catch Block:
+```java
+  try (Scanner input = new Scanner(System.in)) {
+            RandomNumberGenerator object = new RandomNumberGenerator();
+
+            System.out.print("Enter a Number\t");
+            int number;
+            number = input.nextInt();
+
+            System.out.print("Generating a random number between 0 and " + Math.abs(number));
+            char quit = 0;
+
+            while (quit != 'q') {
+                object.setUserInput(number);
+                object.RandomNumber();
+                System.out.print("\nEnter 'r' to generate another random number or 'q' to quit the program\t");
+                quit = input.next().charAt(0);
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("This is not a Number You Dumdass");;
+        }
+```
+
