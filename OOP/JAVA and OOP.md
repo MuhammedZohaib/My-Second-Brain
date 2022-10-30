@@ -6,24 +6,96 @@ Information Hiding on advance Level.
 # Diff. b/w class and obj:
 * Drawing a class
 Drawing is a class is like making a blueprint for making objects with certain properties and objects. This doesn't allocate any space in memory.
-* Buiding an Object
+* Building an Object
 Building an Object is like making a new object from a class. it allocates space in system memory and can use properties and methods of its class.
 
-# Instantaion:
-Creating an Object from its class is known as instantaion of its class. Because object is an instance/image of its class.
+# Instantiation:
+Creating an Object from its class is known as instantiation of its class. Because object is an instance/image of its class.
 
 # Reuse:
 Declaring Classes allow reuse of code.
 Saves Time and Effort.
 
-# Inheritence:
+# Inheritance:
 In inheritance we inherit properties and methods from a class to create another class and can be modified later.
 Save time while creating new classes.
+
+**Super-Class, Base Class, Parent Class** -> *Parent*
+**Sub-Class, Derived Class, Child Class** -> *child*
+To inherit from a class, use the `extends` keyword.
+
+```java
+class Vehicle {
+  protected String brand = "Ford";        // Vehicle attribute
+  public void honk() {                    // Vehicle method
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";    // Car attribute
+  public static void main(String[] args) {
+
+    // Create a myCar object
+    Car myCar = new Car();
+
+    // Call the honk() method (from the Vehicle class) on the myCar object
+    myCar.honk();
+
+    // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+```
+
+We set the **brand** attribute in **Vehicle** to a `protected` access modifier. If it was set to `private`, the Car class would not be able to access it.
+
+If you don't want other classes to inherit from a class, use the `final` keyword.
+
+#### Why And When To Use "Inheritance"?
+- It is useful for code re-usability: reuse attributes and methods of an existing class when you create a new class.
+
+*Call the constructor of the Employee super-class with n, s, year,
+month, and day as parameters:*
+```java
+public Manager(String name, double salary, int year, int month, int day)
+{
+super(name, salary, year, month, day);
+bonus = 0;
+}
+```
+
+
+
+# Polymorphism:
+Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.**Polymorphism** uses inherited methods to perform different tasks. This allows us to perform a single action in different ways.
+
+```java
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+```
+
+
 
 # Building Block Approach of Java:
 We Can re-use available blocks of code in Java.
 
-## Insatnce Variable:
+## Instance Variable:
 An _instance variable_ is a variable which is declared in a class but outside of constructors, methods, or blocks.
 Value of the attribute in the object is know as Instance Object.
 
@@ -45,13 +117,13 @@ Import Libraries as Java API.
 * Edit 
 * Compile
 * Load into memory
-* Bytecode Verification
+* Byte-code Verification
 * Execute
 
 We use .`java` extension at the end of java file.
 
 # Compiling of A Java Program:
-When we compile a Java program it does'nt convert our code to machine language rather it converts it to **Bytecode**
+When we compile a Java program it doesn't convert our code to machine language rather it converts it to **Byte-code**
 After Compilation is successful it creates a `.class` file which contains bytecode of source code.
 Bytecodes are executed by JVM{Java Virtual Machine}.
 Class Name and File name should be same in Java.
@@ -72,7 +144,7 @@ further sub-classes can be used more than once.
 Pascal case is used for classes and camel case of variables.
 `String[]`  is a datatype.
 `main` indicates that execute this function first.
-`args`  -> arguments which can be given after compiliation while running program in Terminal.
+`args`  -> arguments which can be given after compilation while running program in Terminal.
 
 we Use `%s` for string as format specifier.
 
@@ -137,7 +209,7 @@ boolean myBool = true;
 String myText = "Hello";
 ```
 
-# Displaying Varibales:
+# Displaying Variables:
 We use `println` to display variables and use + symbol for concatenation.
 
 ```java
@@ -185,7 +257,7 @@ System.out.println(x + y + z);
 
 All variable should be given unique names which are known as identifiers.
 
-# DataTypes:
+# Datatypes:
 ```java
 int myNum = 5;               // Integer (whole number)
 float myFloatNum = 5.99f;    // Floating point number
@@ -195,10 +267,10 @@ String myText = "Hello";     // String
 ```
 
 There are two types of data types:
-* Primitive DataTypes
-* Non-Primitive DataTypes
+* Primitive Datatypes
+* Non-Primitive Datatypes
 
-### Primitive DataTypes:
+### Primitive Datatypes:
 -> `byte` 1-byte
 -> `short` 2-bytes
 -> `int` 4-bytes
@@ -273,7 +345,7 @@ System.out.println(greeting);
 
 
 
-### Non-Primitive DataTypes:
+### Non-Primitive Datatypes:
 Non-primitive data types are called **reference types** because they refer to objects.
 The main difference between **primitive** and **non-primitive** data types are:
 -   Primitive types are predefined (already defined) in Java. Non-primitive types 
@@ -299,14 +371,14 @@ String greeting = "Hello";
 ```
 
 ### String Methods:
-* `.lenght()`  It gives you the lenght of the string.
-* `.toUpperCase()` Converts string to UpperCase
-* `.toLowerCase()` Converts string to LowerCase
+* `.lenght()`  It gives you the length of the string.
+* `.toUpperCase()` Converts string to Upper Case
+* `.toLowerCase()` Converts string to Lower Case
 * `.indexOf("Part of String")` Gives the Index Number of specific text in String
 * `.concate()` sum up two strings
-* `.string1.equals(string2)` Check wether `string1` is equal to `string2` (Case Sensitive).
+* `.string1.equals(string2)` Check whether `string1` is equal to `string2` (Case Sensitive).
 * `.string1.equalsIgnoreCase(string2)` (Not case Sensitive)
-* `.lastIndexOf("")` last occurence of sub string.
+* `.lastIndexOf("")` last occurrence of sub string.
 * `.replace("Substring", "New Substring") `
 * `.substring`
 * `.split("-")`
@@ -735,8 +807,32 @@ Do not control access level, but provides other functionality.
 * `synchronzied` (Methods can only be accessed by one thread at a time)
 * `volatile` (The value of an attribute is not cached thread-locally, and is always read from the "main memory")
 
-->A `static` method means that it can be accessed without creating an object of 
-    the class.
-->An `abstract` method belongs to an `abstract` class, and it does not have a 
-    body.
+->A `static` method means that it can be accessed without creating an object of the class.
+->An `abstract` method belongs to an `abstract` class, and it does not have a body.
+
+
+# Inner Classes:
+In Java, it is also possible to nest classes (a class within a class). The purpose of nested classes is to group classes that belong together, which makes your code more readable and maintainable.
+To access the inner class, create an object of the outer class, and then create an object of the inner class:
+
+```java
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+```
+
+Inner classes are a security mechanism in Java. We know a class cannot be associated with the access modifier `private`, but **if we have the class as a member of other class**, then the inner class can be made private. And this is also used to access the private members of a class.
+
 

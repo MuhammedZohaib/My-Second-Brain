@@ -40,15 +40,15 @@ we'll also try to use min() function for padding so it'll choose the minimum of 
 padding: min(30vh, 10rem), 2em; 
 ```
 For making our navigation responsive we must use media queries.
-We'll use max-width media query at 560px or 35em So when the mobile view will be limited to max screen size of 560px or 35em.
-For desktop view we'll also use a min-width media at 768px.
+We'll use max-width media query at `560px` or `35em` So when the mobile view will be limited to max screen size of `560px` or `35em`.
+For desktop view we'll also use a min-width media at `768px`.
 we'll be using two media queries just for navigation rest of the body will be same like mobile view first and add new media query for desktop view.
-Also we'll use aria-labels to apply conditions and use the attribute selector in the css and setAttribute in JS for manipulation.
+Also we'll use aria-labels to apply conditions and use the attribute selector in the CSS and `setAttribute` in JavaScript for manipulation.
 
-we'll add an image in the button tag and enclose the the whole button in a div then make a nav tag in that div and give it two classes one is for styling with display none and other is for toggling it with Javascript.
-we'll select the attribute src of the image and set it to close icon using condtion that if the nav has class show in it's class list.
+we'll add an image in the button tag and enclose the the whole button in a div then make a nav tag in that div and give it two classes one is for styling with display none and other is for toggling it with JavaScript.
+we'll select the attribute src of the image and set it to close icon using condition that if the nav has class show in it's class list.
 
-## Javascript Logic
+## JavaScript Logic
 
 ```JS
 	const button = document.querySelector("#button");

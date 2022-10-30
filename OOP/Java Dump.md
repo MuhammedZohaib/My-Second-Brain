@@ -45,14 +45,14 @@ return id;
 ```
 
 `java.lang` is a default package it is automatically imported.
-String are non-primtitve data types they have there own methods and properties.
-Non-Primitive datatypes are also known as Reference datatyes.
+String are non-primitive data types they have there own methods and properties.
+Non-Primitive datatypes are also known as Reference datatypes.
 The variables in a class are known as attributes.
-To create a String as a attribute we need to make `Constructor` because `String ` is a refrence datatype and is a type of `class`
+To create a String as a attribute we need to make `Constructor` because `String ` is a reference datatype and is a type of `class`
 
 we can make more than one object from a object.
 
-Difference b/w value type and refrence type.
+Difference b/w value type and reference type.
 
 Write Attributes first and then methods in a class.
 The order doesn't matter in java we can call method anywhere in the class.
@@ -317,4 +317,87 @@ jar cvf jarFileName file1 file2...
 
 # Override:
 To change the functionality of a in built method so it work only with the class in which it is overridden.
+
+
+# Java Composition:
+Composition in java is the design technique to implement **has-a** relationship in classes. We can use java inheritance or Object composition in java for code reuse.
+For example, a `Person` has a `Job`. Let’s see this with a java composition example code.
+```java
+package com.journaldev.composition;
+public class Job {
+    private String role;
+    private long salary;
+    private int id;
+        
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public long getSalary() {
+        return salary;
+    }
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+}
+```
+
+```java
+package com.journaldev.composition;
+
+public class Person {
+
+    //composition has-a relationship
+    private Job job;
+   
+    public Person(){
+        this.job=new Job();
+        job.setSalary(1000L);
+    }
+    public long getSalary() {
+        return job.getSalary();
+    }
+}
+```
+
+```java
+package com.journaldev.composition;
+
+public class TestPerson {
+
+    public static void main(String[] args) {
+        Person person = new Person();
+        long salary = person.getSalary();
+    }
+
+}
+```
+
+# Class Design:
+* Always keep data private.
+* Always initialize data.
+* Don’t use too many basic types in a class.
+* Not all fields need individual field accessors and mutators.
+* Break up classes that have too many responsibilities.
+* Make the names of your classes and methods reflect their responsibilities.
+* Prefer immutable classes.
+
+# Immutable Class:
+Immutable class in java means that once an object is created, we cannot change its content.
+
+- The class must be declared as final so that child classes can’t be created.
+- Data members in the class must be declared private so that direct access is not allowed.
+- Data members in the class must be declared as final so that we can’t change the value of it after object creation.
+- A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
+- Deep Copy of objects should be performed in the getter methods to return a copy rather than returning the actual object reference).
+
+
 

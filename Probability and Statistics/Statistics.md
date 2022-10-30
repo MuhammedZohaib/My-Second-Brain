@@ -1,5 +1,5 @@
 # Statistics:
-The branch of mathematical science that deals with the collection of data, organization of data, summerization of data, presentation of data and analysis of data under the face of uncertainity to make inference about any phenomenon is know as Statistics.
+The branch of mathematical science that deals with the collection of data, organization of data, summerization of data, presentation of data and analysis of data under the face of uncertainty to make inference about any phenomenon is know as Statistics.
 
 Statistics facts and numbers.
 
@@ -8,24 +8,24 @@ Statistics facts and numbers.
 * **Deterministic** -> Outcome is Certain
 * **Probabilistic** -> Outcome is Uncertain
 
-*Inference Means Draw Concolusion.*
+*Inference Means Draw Conclusion.*
 
 # Types of Statistics:
 1. **Descriptive Statistics:**
-The Branch of statistics that deals with collection, arrangments, summerization and the transaction of data.
+The Branch of statistics that deals with collection, arrangements, summerization and the transaction of data.
 
 2. **Inferential Statistics**
 The Branch of statistics that deals with a sample data to draw a conclusion about the population.
 
 
 ## Population:
-The collection of things having atleast one common chracteristics is known as Population.
+The collection of things having at least one common characteristic is known as Population.
 
 ## Sample: 
 A Subset or part of a population selected for study is known as a sample.
 
 ## Representative Sample:
-A sample that possess all the chracteristics of a population is known as a representative sample.
+A sample that possess all the characteristics of a population is known as a representative sample.
 
 A sample that represents the characteristics of the population as closely as possible is called a representative sample.
 
@@ -53,7 +53,7 @@ An element or member of a sample or population is a specific subject or object (
 
 **GIGO** -> Garbage in Garbage out
 
-# Hirarchy of Data:
+# Hierarchy of Data:
 --> Population: 
 * Elements -> Any part or entity belongs to a sample or population.
 * Variables -> Any characteristics that belongs to any element/member.
@@ -61,14 +61,14 @@ An element or member of a sample or population is a specific subject or object (
 * Data -> The set or collection of observations known as data.
 * Information -> The processed data is known as Information.
 
-We need Information to make decision and draw concolusions.
+We need Information to make decision and draw conclusions.
 
 # Types of data:
-* **Qunatitative Data**
+* **Quantitative Data**
 * **Qualitative Data**
 
-**Qunatitative Data:** A variable that can be described numerically.
-1. Discrete Quantitaive Data  
+**Quantitative Data:** A variable that can be described numerically.
+1. Discrete Quantitative Data  
 * Countably Finite -> Students of BCS-B
 * Countably Infinite -> Students in Whole world
 
@@ -84,7 +84,7 @@ The variable which is comprised of possible points which exist between A and B o
 A data which has not gone through any statistical treatment is known as raw data.
 
 # Mutually Exclusive Event:
-An event is said to be a mutually a mutually exclusive of occurrence of an event, denies the occurence of other possible event.
+An event is said to be a mutually a mutually exclusive of occurrence of an event, denies the occurrence of other possible event.
 
 # Formulas:
 [[Formulas]]
@@ -94,8 +94,8 @@ It shows the frequency of each data as its separate data value rather than group
 # Group Frequency Distribution:
 The distribution of data into group along with their value.
 
-* Data -> Homogenous -> Simple Frequency Distribution
-* Data -> Heterogenous -> Group Frequency Distribution
+* Data -> Homogeneous -> Simple Frequency Distribution
+* Data -> Heterogeneous -> Group Frequency Distribution
 
 # Cumulative Frequency:
 The sum of frequencies from a given minimum point to a maximum point is known as cumulative frequency.
@@ -103,29 +103,29 @@ It is Represented by 'F'.
 'f' represents simple frequency.
 
 
--> If Variation is Great then the data is **Heterogenous**
--> If Variaton is less then the data is **Homogenous**
+-> If Variation is Great then the data is **Heterogeneous**
+-> If Variation is less then the data is **Homogeneous**
 
 # Measures of Central Tendencies:
-* Arithemetic Mean
+* Arithmetic Mean
 * Median
 * Mode
 * Geometric Mean
 * Harmonic Mean
 
-## Heterogenity:
-A data is said to have heterogenity if it contains:
+## Heterogeneity:
+A data is said to have heterogeneity if it contains:
 --> Outliers
 --> Trends
 --> Clusters
 
 ### Outliers:
 An extreme value in data which seems to be non-representative.
-Arithematic mean is not suitable in such situations.
+Arithmetic mean is not suitable in such situations.
 **Example:** {1,4,6,7,30}
 
 ### Trends:
-Any non-linear data behaviour is known as Trends.
+Any non-linear data behavior is known as Trends.
 **Example:** {3,9,30,100,400,1400,5000}
 
 ### Clusters:
@@ -133,8 +133,8 @@ A data that contains classes/groups which are similar to each other but signific
 **Example:** Salary Data
 {15,16,18} {50,55,57} {100,110,120}
 
-# Arithematic Mean:
-Let x be the data observations (**Homogenous**), then Arithematic Mean is:
+# Arithmetic Mean:
+Let x be the data observations (**Homogeneous**), then Arithmetic Mean is:
 we add up all the frequencies and divide them by the number of total frequencies.
 
 -> **For Sample:** 
@@ -150,7 +150,7 @@ Most of the Employees have a salary around Rs. 17,000
 # Median:
 -> **For Odd Number of Observations:**
 
-X = {|n/2| + 1} th observation
+X = {|n/2| + 1} Th observation
 
 -> **For Even Number of Observations:**
 The Average of two most centered values.
@@ -161,7 +161,7 @@ X = {|n/2| + {|n/2| + 1}} / 2
 **Examples:**
 
 X = 3,8,5,9,12,17,7
-Let's arrange in asscending order:
+Let's arrange in ascending order:
 X = 3,5,7,8,9,12,17
 n= 7
 So,

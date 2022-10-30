@@ -31,11 +31,11 @@ Yay!!!
 """;
 ```
 
-Using assignment opertor(=) instead of comparison operator( == ).
+Using assignment operator(=) instead of comparison operator( == ).
 
 Use `.equals()` to compare two objects.
 
-Use Break statment after every case in a switch.
+Use Break statement after every case in a switch.
 
 ```java
 switch (color){
@@ -53,7 +53,7 @@ switch (color){
 2. Infinite Loops
 
 
->Debugging is twice as hard as wiriting the code in the first place. Therefore, if you write the code as cleverly as possible, you are by defination, not smart enough to debug it.
+>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are by definition, not smart enough to debug it.
 
 * Small Focused methods vs. one giant method
 * Group with packages and classes
@@ -92,7 +92,7 @@ OutOfMemoryError -> No more heap space available
 **Common Causes of OutOfMemoryError**
 1. Heap Size isn't big enough
 2. Memory Leak (Object that cannot be garbage collected) {Use Memory Profiling Tools}
-3. Slow Garbage Collector (More Processing Power, eco mode of hardware)
+3. Slow Garbage Collector (More Processing Power, Eco mode of hardware)
 
 
 **Stop the world Garbage Collection:**

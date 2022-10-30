@@ -22,8 +22,8 @@ A collection has two or more than two components.
 
 **Implementation of Interfaces**
 * Specific data structures.
-* Performance Chracteristics
-* Concrete and Instantiable
+* Performance Characteristics
+* Concrete and Instantiation
 
 `Are elements keyed or not?`
 > `Order is Important?
@@ -31,11 +31,11 @@ A collection has two or more than two components.
 > `Elements must be unique?
 > If Order is important then use sorted set else use set
 > `Does Insertion Order Matter?
-> If inseriton order matter use Double end que else use list.
+> If insertion order matter use Double end Que else use list.
 
 ![[Pasted image 20221014031827.png]]
 
-**Collection Behaviours:**
+**Collection Behavior:**
 1. `size()`
 2. `isEmpty()`
 3. `add(element)`
@@ -56,8 +56,8 @@ A collection has two or more than two components.
 
 Lists are the most popular form of collection
 
-1. ArrayLists
-2. LinkedLists
+1. Array Lists
+2. Linked Lists
 
 **Key Features Of Lists:**
 * Lists are collections with iteration order {Every Element in the list has an index associated with it which determines its position in the list. starts from 0} 
@@ -69,7 +69,7 @@ E set(int index, E element);
 boolean addAll(int index, Collection c);
 ```
 
-Sublists are views. Over ranges of Lists
+Sub lists are views. Over ranges of Lists
 Modifying the view modifies the list.
 
 ```java
@@ -80,7 +80,7 @@ List subList(int fromIndex, int toIndex);
 list.sort(Comparator<? Super E > comparator)
 ```
 
-# Storing Value form user in ArrayList:
+# Storing Value form user in Array List:
 ```java
 import java.util.ArrayList;  
 import java.util.Scanner;  

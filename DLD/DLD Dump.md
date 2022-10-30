@@ -28,7 +28,7 @@ NAND/NOR gate is a self-sufficient (can build any logic circuit with it).
 Can be used to implement AND/OR/NOT.
 
 There are two types of logic:
- 1. Combinational Logic (Comparator,Adder,Subtractor)
+ 1. Computational Logic (Comparator,Adder,Subtractor)
  2. Sequential Logic
 
 
@@ -37,15 +37,15 @@ We can implement :
 2. The decoding function (convert binary digits to digital values)
 3. The counting function 
 
-**Multiplexor** (Multiple inputs one output) (Recieving End)
-**De-Multiplexor** (one input multiple output) (Transmission End)
+**Multiplexer** (Multiple inputs one output) (Receiving End)
+**DE-Multiplexer** (one input multiple output) (Transmission End)
 
 flip-flop storage only stores one binary value
 registers can store multiple binary values (Shift register)
 
 DIP (Dual In-line Pins)
 
-With DMM (Digital Multimeter) we can measure Voltage Current Resistance
+With DMM (Digital Multi-meter) we can measure Voltage Current Resistance
 
 PLDs(Programmable Logic Devices)
 

@@ -68,6 +68,9 @@ hping3 --flood  -S -V --rand-source "Target Domain here"
 
 ## Arguments:
 1. `-s` Scan Type
+2. `-n` Don't convert to domain names
+3. `-Pn` to avoid host discovery
+4. `--reason` it states the reason why port is marked as open,closed or filtered.
 
 ## Ping Scan:
 Our first goal is to reduce IP ranges to active or interested hosts.
@@ -117,6 +120,42 @@ sudo nmap -sS -sU 192.168.43.206 -p1-65535
 
 Port Ranges From `1 to 65535`
 IP Ranges From `0 to 255`
+
+## TCP Scan:
+`-sT` indicates that the scan type is TCP.
+
+Send `SYN` Packet
+Receive `SYN,ACK` Packet (*If Port is Open/Listening*) else `ICMP` unreachable error is received
+And we send `RST` packet to interrupt the three-way handshake in normal condition an `ACK` packet is sent to perform a three way handshake
+
+```bash
+nmap -sT -n -Pn "Ip Address" --top-ports 100
+```
+
+In this type of scan the three way handshake is completed and the destination keeps a record of it which indicates that this is not a much of a stealthy scan.
+
+## UDP Scan:
+`-sU` indicates that the scan type is UDP.
+
+Important UDP Ports are:
+1. `DNS` -> Port 53
+2. `TFTP` -> Port 69
+3. `DHCP` -> Port 67-68 
+4. `NTP` -> Port 123
+5. `SNMP` -> Port 161-162
+
+Send empty `UDP` packets in general. Should run with version detection option for more accurate results 
+
+```bash
+sudo nmap -n -Pn -sU 172.20.10.1 --top-ports 10 --reason -sV
+```
+
+```bash
+netstat -tnlp
+service ssh stop #Stop ssh service
+nano /etc/ssh/sshd_config #edit ssh config file
+```
+
 
 
 

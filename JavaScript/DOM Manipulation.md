@@ -1,10 +1,10 @@
 # DOM:
 
-DOM stands for document object model. It can be thought of as a tree model of your html created by the browser and Javascript can be used to read, write and manipulate the DOM. An interface for changing the content of a web page.
+DOM stands for document object model. It can be thought of as a tree model of your html created by the browser and JavaScript can be used to read, write and manipulate the DOM. An interface for changing the content of a web page.
 It's arranged in a hierarchical tree. DOM is the representation of an html document.
 It is object oriented which means that each node has its own methods and properties.
 The browser gives us a main window object which is the browser itself then we have document object in it which further root element and so on.
-Technically it's an API(Application programming InterFace);
+Technically it's an API(Application programming Interface);
 
 ```DOM
 console.dir(document);
