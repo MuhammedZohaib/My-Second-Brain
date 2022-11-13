@@ -1,9 +1,9 @@
-Till now we have `Arrays` for storing data but they are not enough, Thats why we need `Collections`
+Till now we have `Arrays` for storing data but they are not enough, That's why we need `Collections`
 
 > Why Arrays aren't Good Enough?
 
-Because we need to specifiy the length of the array. with only Arrays we cannot make a resiable array. we must define the size of array first before we can use it.
-If we use only arrays in our programs our code will be extensive and we'll have to do alot of effort which will reduce productivity.
+Because we need to specify the length of the array. with only Arrays we cannot make a re-sizable array. we must define the size of array first before we can use it.
+If we use only arrays in our programs our code will be extensive and we'll have to do a lot of effort which will reduce productivity.
 
 **Collections of Collections:**
 -> Collections

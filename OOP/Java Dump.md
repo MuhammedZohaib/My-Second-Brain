@@ -399,5 +399,104 @@ Immutable class in java means that once an object is created, we cannot change i
 - A parameterized constructor should initialize all the fields performing a deep copy so that data members can’t be modified with an object reference.
 - Deep Copy of objects should be performed in the getter methods to return a copy rather than returning the actual object reference).
 
+# `final` keyword:
+**Instance variables** with `final` access modifiers cannot be changed once they are assigned a value and similarly **methods** with `final` keyword cannot be over-written.
+**Classes** with `final` keyword means that the class cannot be further extended and is the last class in the class hierarchy. ***It cannot be treated as a base class for another class.***
+In inheritance when we need to end the  hierarchy tree we can declare the last class as `final` which will indicate that this hierarchy tree ends with this `final` class and cannot be extended.
+
+# `static` keyword:
+* `static` methods can only access `static` Instance variables but `non-static` methods can access both `static` as well as `non-static` Instance methods.
+* if we create a `static` Instance variable it will only be defined once irrespective of the number of objects we create. 
+```java
+class staticDemo{
+static int staticVar;
+int variable;
+
+public staticDemo(){
+variable = 0;
+}
+public static void setStaticVar(int x){
+staticVar = x;
+}
+public void increase(){
+staticVar++;
+variable++;
+}
+public void display(){
+System.out.println(staticVar);
+System.out.println(variable);
+}
+
+public class Test{
+public static void main(String[] args){
+staticDemo st1 = new staticDemo();
+staticDemo st2 = new staticDemo();
+
+st1.increase(); //staticVar = 1 , variable = 1
+st1.increase(); //staticVar = 2 , variable = 2
+st1.display();
+
+st2.increase(); //staticVar = 3 , variable = 1
+st2.increase(); //staticVar = 4 , variable = 2
+st2.increase(); //staticVar = 5 , variable = 3 
+st2.display();
+
+/*Here as we have called the increment method five times with two separate objects.With st1 the value of static object will be 2 and 2 for non-static variable but when we will call the increase method again for 3 times this will increment 3 in already existing value of static variable.So, the value of static variable will be 5 while the value of non-static varible will be 3 after defining second object st2*/
+}
+}
+}
+```
+
+* Also if we use `static` access modifier we can simply call the method or access Instance variable using class name along with `.` Notation.
+```java
+ClassName.method(); //To access static method
+ClassName.variable; //To access static variable
+```
+
+# `this` Keyword:
+If parameters of a constructor or a method have same name then we use `this`
+keyword to refer to the Instance variable of the class.
+`this` keyword is used to prevent any ambiguity which is caused by same names of parameters and Instance Variables.
+we can also use `this` keyword to call the constructor of the class in itself.
 
 
+# Reverse A String:
+```java
+String name = Zohaib;
+String reversed = null;
+
+for(int i= name.length() - 1; i>=0; i--){
+	reversed += name.charAt(i);
+}
+System.out.println(reversed);
+```
+
+# Wrapper Class Methods:
+
+`methods:`
+```java
+WrapperClass.toBinaryString();
+WrapperClass.toHexString();
+WrapperClass.parseInt();
+```
+
+# Interfaces:
+
+Interface can also contain method bodies if they are declared with `static` or `default` keyword. 
+To access `static` method of an interface we can use the interface name along with method name.
+If we only override a few methods of an interface in a class we need to make the implementing class `abstract`
+
+The instance variables in an interface are treated as a constant and the value cannot be re-assigned, we have to initialize the instance variable in the interface.
+
+# Tip:
+To find min and max term form an array sort the array at index 0 there will be min term and at `n-1` index there will be the max term.
+
+```java
+int[] array = Arrays.stream(this.array).sorted().toArray();
+```
+
+
+# Array to Array-List:
+```java
+ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));
+```

@@ -65,6 +65,14 @@ bonus = 0;
 }
 ```
 
+```java
+//Form Class to Class
+extends
+//Form Interface to Interface
+extends
+//Form Interface to Class
+implements
+```
 
 
 # Polymorphism:
@@ -78,12 +86,14 @@ class Animal {
 }
 
 class Pig extends Animal {
+@Override
   public void animalSound() {
     System.out.println("The pig says: wee wee");
   }
 }
 
 class Dog extends Animal {
+@Override
   public void animalSound() {
     System.out.println("The dog says: bow wow");
   }

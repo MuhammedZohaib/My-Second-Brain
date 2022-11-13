@@ -20,3 +20,17 @@ The src folder is the folder where you'll do most of Your work. src is short for
 In intelliJ while working on a project you'll not actually see any out folder at start it'll appear as soon as you run you're program for the first time.
 The out folder contains the executable java files of your program. In other words we can say this folder contains `.class` files which contains `bytecode` for our java files.
 **External Libraries** folder contain libraries on which our project depends
+
+# Scratches and Consoles:
+Let's you write To-Do tasks along with scratch code which you are not sure whether to add into your project or not.
+After we have made a scratch file and it's functional we can add it to our main project. Similarly we can add TO-DO tasks.
+
+```
+// TODO This is a new task and not a regular comment
+```
+
+# Problem Tab and Terminal:
+Problem tab keeps all the warnings and error in a file. This usually saves a lot of time as a developer because instead of navigating warning or error to error we can have them all in one place and easily resolve them from here.
+
+The terminal window is also very useful as the in built terminal of the IDE always open in the directory of the project we are working on. Due to which we can easily run any commands without navigating to the project directory.
+

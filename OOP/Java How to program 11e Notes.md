@@ -46,5 +46,17 @@ contains several such operations, the operators are applied from left to
 right. Addition and subtraction operators have the same level of
 precedence.
 
-Never Use `printf` to print a `String` while taking input from the user as it can result in security breach as malicious user can supply format specifier and execute through `printf`
+Never Use `printf` to print a `String` while taking input from the user as it can result in security breach as malicious user can supply format specifier and execute through `printf`.
 
+# Inheritance:
+*When creating a class, rather than declaring completely new members, you can designate that the new class should inherit the members of an existing class. The existing class is called the super-class, and the new class is the subclass*
+
+***Inheritance is sometimes referred to as specialization.*
+
+## *Protected Members:*
+*A class’s `public` members are accessible wherever the program has a reference to an object of that class or one of its sub classes. A class’s `private` members are accessible only within the class itself. In this section,we introduce the access modifier `protected`. Using protected access offers an intermediate level of access between public and private.*
+
+We use `.super` to refer to the parent class.
+
+## *Behavior of Constructors in Inheritance:*
+Constructors are not inherited.
