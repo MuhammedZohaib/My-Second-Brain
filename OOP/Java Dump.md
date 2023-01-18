@@ -117,7 +117,7 @@ To compare `int` type we use ==
 Argument Promotion -> Going from small data type to big data type.
 Like from `int` to `double`
 
-Overloading -> Same method name with different datatype and different arguments.
+Overloading -> Same method name with different return type and different arguments.
 
 In `static` methods we can simply use the method by using the `class` name.
 `static` methods doesn't need new object to be accessed it can be simply accessed by using class name.
@@ -186,7 +186,7 @@ public int sum(int num1, int num2){ //here num1 and num2 are parameters
 
 # Method Overloading:
 -> Type Promotion.
-Same name for methods with different parameters or different datatypes.
+Same name for methods with different parameters or different return types.
 We can also use type promotion along with method overloading.
 We can also overload `main` function.
 
@@ -500,3 +500,14 @@ int[] array = Arrays.stream(this.array).sorted().toArray();
 ```java
 ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));
 ```
+
+* constant time
+* amortized constant time
+* on time
+* linear time
+* amortized time cost
+* ensure capacity operation
+
+`enum` constants are implicitly `final`.
+`enum` constants are implicitly `static`.
+

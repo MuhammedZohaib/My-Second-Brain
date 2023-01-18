@@ -19,9 +19,6 @@
 
 
 
-
-
-
 **The shell decides if a path is absolute or relative by looking at its first character: If it begins with `/`, it is absolute. If it _does not_ begin with `/`, it is relative.**
 
 * As shell doesn't have a trash can so once you delete file it cannot be recovered.

@@ -36,6 +36,8 @@ bettercap -iface wlp4s0
 > net.sniff on
 > wifi.deauth "bssid here"
 
+#cowpatty and genpmk work together as the genpmk takes the wordlist along with the ssid of wifi to convert the password list into PSKs of the that wifi network. Remeber the PSK key encryption for every network will be different the Name of the wifi "ssid" is used as the Salt to convert plain password into the PSK. It uses PBKDF2 algorithm to make PSK it takes passpharase along with ssid as salt and apply hasing algorithm number of times for generating hash.
+
 cowpatty -f "path to wordlist" -r "packet capture file" -s "ssid"
 genpmk -f "path to wordlist" -d "output file name" -s "ssid"
 cowpatty -d "hash file from genpmk" -r "packet capture file" -s "ssid"
@@ -83,4 +85,23 @@ sudo hostapd "path to config file"
 
 sudo airebase-ng -e "Name" -c "Channel Number" wlp4s0mon #creates a fake access point
 ```
+
+
+![[Screenshot from 2023-01-18 19-06-19.png]]
+
+![[Screenshot from 2023-01-18 19-09-55.png]]
+
+## SHA-256
+
+![[Screenshot from 2023-01-18 21-00-55.png]]
+
+![[Screenshot from 2023-01-18 21-06-18.png]]
+
+### Concept of Salt:
+
+![[Screenshot from 2023-01-18 21-12-17.png]]
+
+## Difference between Hashing and Encryption
+
+![[Screenshot from 2023-01-18 21-18-01.png]]
 

@@ -358,8 +358,7 @@ System.out.println(greeting);
 ### Non-Primitive Datatypes:
 Non-primitive data types are called **reference types** because they refer to objects.
 The main difference between **primitive** and **non-primitive** data types are:
--   Primitive types are predefined (already defined) in Java. Non-primitive types 
- are created by the programmer and is not defined by Java (except for `String`).
+-   Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for `String`).
 -   Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
 -   A primitive type has always a value, while non-primitive types can be `null`.
 -   A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
@@ -794,14 +793,14 @@ public class Main {
 
 # JAVA Modifiers:
 ## Access Modifiers 
-Controls the access levely
+Controls the access level
 
--> `class` can either be `public` means available to all or `default` means availble in same package only. `default` is set if we dont specify any access modifier.
+-> `class` can either be `public` means available to all or `default` means available in same package only. `default` is set if we don't specify any access modifier.
 -> For `attributes` `methods` and `constructors` we can use 
 * `public` (The code is accessible for all classes) 
 * `private` (The code is only accessible within the declared class)
 * `default` (The code is only accessible in the same package. This is used when you don't specify a modifier.)
-* `protected` (The code is accessible in the same package and **subclasses**)
+* `protected` (The code is accessible in the same package and **sub-classes**)
 
 
 ## Non-Access Modifiers

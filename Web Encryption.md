@@ -1,3 +1,6 @@
+
+![[Screenshot from 2023-01-18 21-22-53.png]]
+
 # Web Encryption Protocols:
 We use HTTPs to encrypt the communication between the browser and the web server. The `Https` mainly consist of `Http` and a `s-secure` protocol.
 
@@ -21,8 +24,21 @@ The key need to be identical as of encryption while decryption but how do we sen
 In `TLSv1.2` all the above protocols are used but in `TLSv1.3` only `EC-DHE` is used.
 
 ### TLS Key Exchange:
+
 We use `Diffie-Hellman` key exchange by this there are two public keys(Prime Numbers) which are sent over to server and everyone can see these two keys.
 Now Client generates a private key which only client know and it uses the `Diffie-Hellman` encryption and another two public keys are generated which are exchanged between the client and the server later these exchanged public keys goes under decryption using `Diffie-Hellman` formula and a same key is generated on the both server and client side in this way we can decrypt the encrypted messages.
+
+![[Screenshot from 2023-01-18 21-22-05.png]]
+
+### Vulnerability in Diffie-Hellman Algorithm
+
+![[Screenshot from 2023-01-18 21-37-43.png]]
+
+
+### EC-DHE:
+
+![[Screenshot from 2023-01-18 21-34-27 1.png]]
+
 
 ## Data Encryption Protocols:
 1. `3DES 168bit` *Not used anymore*
@@ -38,6 +54,7 @@ In addition to encryption protocols there are sub protocols which validates the 
 
 Once we encrypt the data with some encryption protocol it goes into sub encryption protocol which generates a hash and this hash is sent along with the encrypted data and sent over to the server where the encrypted data again under goes the same sub encryption protocol and generates a hash if the hash from client and server matches it validates the integrity of the encryption that the bits of the encrypted data haven't been tempered.  
 
+![[Screenshot from 2023-01-18 21-27-07 1.png]]
 
 # Handshake Integrity:
 Handshake integrity is similar to encryption integrity.
@@ -59,6 +76,7 @@ The algorithms used to check integrity of handshake are:
 
 
 # Certificates:
+
 Certificates all start with a certificate authority which is nothing more than a server running which allows to generate certificates. These certificates can be created with open source program like `Open SSL` .
 Certificate authority creates a root certificate with a private key they use that root certificate along with another private key to generate an intermediate certificate and which is then used to generate server certificate.
 In other words we can say that certificates verifies the integrity of the server and client communication that the server is actually who it claims to be.

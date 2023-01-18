@@ -1,3 +1,7 @@
+
+![[Screenshot from 2023-01-17 20-28-56.png]]
+
+
 # -----Arrow Functions-----
 
  These are compact alternative to a tradational function.
@@ -59,6 +63,7 @@ we usually use . notation to access properties/methods.
 ```
 
 # ----This Keyword----
+
 Gives reference to a particular object.
 The object depends on the immediate context.
 

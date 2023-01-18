@@ -60,3 +60,6 @@ We use `.super` to refer to the parent class.
 
 ## *Behavior of Constructors in Inheritance:*
 Constructors are not inherited.
+
+
+Stacks are known as last-in, first-out (LIFO) data structures—the last item pushed onto the stack is the first item popped from the stack.

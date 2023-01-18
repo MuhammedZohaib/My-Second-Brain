@@ -137,12 +137,37 @@ imageview.setX(150);
 imageview.setY(150);
 
 
+//Loading a FXML file in Javafx
+Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fileName.fxml")));
 
-
-
-
-
-
-
+//Scene switching function
+public void switchToScene1(ActionEvent e) throws IOException {  
+    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));  
+    stage =(Stage)((Node)e.getSource()).getScene().getWindow();  
+    scene = new Scene(fxmlLoader.load());  
+    stage.setScene(scene);  
+    stage.centerOnScreen();  
+    stage.show();    
+    }  
+//Loading css file
+scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
 
 ```
+
+```java
+String user = "aitbh$-108@simpleapp";  
+	String password = "nr5yc&6@N58RtL";  
+String url = "jdbc:sqlserver://simpleapp.database.windows.net:1433;database=gym management app;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";  
+Connection conn = DriverManager.getConnection(user,password,url);
+```
+
+
+To access data of the text field select the text field in the scene builder and give it an id now declare a new field of the type `TextField` with the same id as given in the `SceneBuilder`.
+
+```sql
+String update = "INSERT INTO persons(id,firstname,lastname,email,username)\n"+  
+        "VALUES('"+id+ "','"+firstName+"','"+lastName+"','"+email+"','"+username+"');";
+```
+
+
+
