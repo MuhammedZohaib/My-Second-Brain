@@ -7,9 +7,9 @@ Information Hiding on advance Level.
 
 # Diff. b/w class and obj:
 * Drawing a class
-Drawing is a class is like making a blueprint for making objects with certain properties and objects. This doesn't allocate any space in memory.
+Drawing a class is like making a blueprint for making objects with certain properties and methods. This doesn't allocate any space in memory.
 * Building an Object
-Building an Object is like making a new object from a class. it allocates space in system memory and can use properties and methods of its class.
+Building an Object is like making a new instance from a class. it allocates space in system memory and can use properties and methods of its class.
 
 # Instantiation:
 Creating an Object from its class is known as instantiation of its class. Because object is an instance/image of its class.
@@ -136,18 +136,19 @@ We use .`java` extension at the end of java file.
 
 # Compiling of A Java Program:
 When we compile a Java program it doesn't convert our code to machine language rather it converts it to **Byte-code**
-After Compilation is successful it creates a `.class` file which contains bytecode of source code.
-Bytecodes are executed by JVM{Java Virtual Machine}.
+After Compilation is successful it creates a `.class` file which contains byte-code of source code.
+Byte-codes are executed by JVM {Java Virtual Machine}.
 Class Name and File name should be same in Java.
 
 * Loads a program into memory
-* Bytecode Verification
+* Byte code Verification
 
-Gives us Just in TIme Compilation.
-*  Source code to Bytecode
-* Bytecode to Machine Language
+Gives us Just in Time Compilation.
+*  Source code to Byte-code
+*  Byte-code to Machine Language
 
-# Java Syntax:
+# Java Syntax:  
+
 Public -> Available To all
 Private -> Ownership of some entity
 
@@ -366,7 +367,7 @@ The main difference between **primitive** and **non-primitive** data types are:
 -   A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
 -   The size of a primitive type depends on the data type, while non-primitive types have all the same size.
 
-Examples of non-primitive types are [Strings](https://www.w3schools.com/java/java_strings.asp), [Arrays](https://www.w3schools.com/java/java_arrays.asp), [Classes,](https://www.w3schools.com/java/java_classes.asp) [Interface](https://www.w3schools.com/java/java_interface.asp), etc. You will learn more about these in a later chapter.
+Examples of non-primitive types are [Strings](https://www.w3schools.com/java/java_strings.asp), [Arrays](https://www.w3schools.com/java/java_arrays.asp), [Classes,](https://www.w3schools.com/java/java_classes.asp) [Interface](https://www.w3schools.com/java/java_interface.asp).
 
 ->`String`
 ->`Arrays`
@@ -394,7 +395,6 @@ String greeting = "Hello";
 * `.substring`
 * `.split("-")`
 * `.trim()`  removes extra white spaces form `String`
-* 
 
 
 # Java Type Casting
@@ -409,7 +409,7 @@ In Java, there are two types of casting:
 
 
 
-# Inserting Special Chracters:
+# Inserting Special Characters:
 * `\'` This will insert single quote
 * `\"` This will insert double quote
 * `\\` This will insert Backslash
@@ -445,7 +445,7 @@ Java has the following conditional statements:
 * `else if`
 * `switch`
 
-## Terniary Operator:
+## Ternary Operator:
 ```java
 variable = (condition) ? expressionTrue :  expressionFalse;
 ```
@@ -567,7 +567,7 @@ Package class_name;
 import java.*;
 ```
 
-# Bitwise Operators:
+# Bit-wise Operators:
 * `~` Compliment
 * `&` and
 * `|` or
