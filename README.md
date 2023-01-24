@@ -23,7 +23,7 @@ If you're looking for a more robust and feature-rich markdown editor, you may wa
 
    * Download the latest version of [Obsidian](https://obsidian.md/download) from the official website
    * Open a terminal and navigate to the directory where the downloaded file is located
-   * Run the following command: sudo dpkg -i obsidian_0.9.9_amd64.deb (replace the file name with the one you downloaded)
+   * Run the following command: `sudo dpkg -i obsidian_0.9.9_amd64.deb` (replace the file name with the one you downloaded)
    * Once installation is complete, launch Obsidian from the terminal using the command obsidian
 
 ## How to Contribute
