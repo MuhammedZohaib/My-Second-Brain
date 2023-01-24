@@ -1,19 +1,40 @@
-# Welcome to My Second Brain
+# My Second Brain
 
-This repository contains notes and information that serves as a personal reference and knowledge base. It covers a wide range of topics and serves as a useful tool for organizing and retrieving information.
-How to Use
+Welcome to my personal notes repository, where I store all of my notes and thoughts as a "second brain." All of the notes are written in the markdown language for easy reading and organization.
+Opening the Notes
 
-    * Browse through the directories and files to find the information you need.
-    * Use the search function to quickly find specific notes or topics.
-    * Add new notes or update existing ones to keep the information up-to-date and accurate.
+To open and read the notes, you will need a markdown editor. Some popular options include:
 
-# How to Contribute
+    1. [Typora](https://typora.io/)
+    2. [MarkdownPad](http://markdownpad.com/)
+    3. [Sublime Text](https://www.sublimetext.com/) with the [MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing) package installed
 
-We welcome and appreciate any contributions to this repository. If you would like to contribute, please follow these steps:
+# Installation Guide for Obsidian on Windows and Linux
 
-    * Fork the repository.
-    * Make your changes in a new branch.
-    * Submit a pull request to the main repository.
-    * Your changes will be reviewed and, if approved, will be merged into the main branch.
+If you're looking for a more robust and feature-rich markdown editor, you may want to check out Obsidian. Here's how to install it on Windows and Linux:
 
-Please make sure to read and follow the contribution guidelines before making any changes.
+## Windows Installation
+
+    * Download the latest version of [Obsidian](https://obsidian.md/) from the official website
+    * Run the installer and follow the prompts
+    * Once installation is complete, launch Obsidian from the Start menu
+
+## Linux Installation
+
+    * Download the latest version of [Obsidian](https://obsidian.md/download) from the official website
+    * Open a terminal and navigate to the directory where the downloaded file is located
+    * Run the following command: sudo dpkg -i obsidian_0.9.9_amd64.deb (replace the file name with the one you downloaded)
+    * Once installation is complete, launch Obsidian from the terminal using the command obsidian
+
+## How to Contribute
+
+If you would like to contribute to this repository, please follow these steps:
+
+    Fork the repository
+    Create a new branch for your changes
+    Make your changes and commit them
+    Open a pull request to the original repository
+
+Please note that all contributions will be reviewed and may be rejected if they do not align with the purpose and organization of the repository.
+
+Thank you for visiting and happy note-taking!
