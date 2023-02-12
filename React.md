@@ -1,8 +1,31 @@
+React is a javascript library for building user interfaces. It is mostly used to make single page applications. It allows us to create reusable UI components. The one good thing about the react is that it uses virtual DOM so as the edit is done it loads the edits into the virtual DOM and look for changes and only makes small changes in DOM rather than reloading the whole app.
+
+We need to have installed Node JS in order to make react applications. The official way of creating a react app is using node package known as `create-react-app`. But it is important to note that we must install this package locally to make sure everytime we uses the latest version of this package.
+To install this package:
+
+```JS
+npm install create-react-app
+```
+
+If installed globally just simply uninstall it using:
+
+```JS
+npm uninstall -g create-react-app
+```
+
 We can create a simple React app by using node package known as `create-react-app`.
 
 ```JS
 npx create-react-app "app name in lowecase without double quotes here"
 ```
+
+After creating a simple react app go to the directory of the app and run:
+
+```JS
+npm start
+```
+
+This'll start the default react app and you can see live editing in the browser. To edit the project we need to find the `Project/src/App.js`. Open this file and you'll find a div with `className='App'`. This div is where we'll put our html code.
 
 The default file structure of a React app created with `create-react-app` consists of several important directories and files. Here's a brief overview of each one:
 

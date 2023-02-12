@@ -1,5 +1,14 @@
+# ES6 Modules:
+* Classes
+* Arrow Functions
+* Variables
+* Array Methods
+* Destructuring
+* Modules
+* Ternary Operator
+* Spread Opetator
 
-![[Screenshot from 2023-01-17 20-28-56.png]]
+
 
 
 # -----Arrow Functions-----
