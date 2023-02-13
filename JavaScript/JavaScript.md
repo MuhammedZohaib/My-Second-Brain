@@ -563,3 +563,5 @@ Also use export keyword before importing a function into another file.
 	import * as descriptive name from "./second JS file path";
 	console.log(descriptivename.getfunctionName());
 ```
+
+
