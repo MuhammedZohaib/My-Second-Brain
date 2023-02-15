@@ -236,6 +236,47 @@ main();
 window.setInterval(() => {
 	console.log('start');
 } , 500)
-// we alse don't need to specify the window object here
+// we alse don't need to specify the window object here.
+//Also we need to stop the time for that puspose we need to specify an ID to the interval
+let timerID;
+timerID = setInterval(() => {
+	console.log('start');
+},500);
+
+clearInterval(timerID);
+```
+
+### Timeouts
+Timeouts delay the execution of a fucntion like if we want to run a function after a given time frame we'll use Timeouts as:
+
+```JS
+setTimeout(() => {
+	console.log('Timeout')''
+}, 2000);
+//It'll delay the arrow function for 2s
+//This also returns a timerID
+```
+
+### AnimationFrames
+Animation frames work very similar to the `setIntervals` 
+```JS
+let animationFrameID = requestAnimationFrame("Pass function here recursively");
+cancelAnimationFrame(animationFrameID);
+//requestAnimationFrame runs approximately 60 times per second or can vary depending upon the system of the user.
+```
+
+```JS
+
+performance.now(); //Returns the milliseconds from the origin time(Since page loaded)
+Date.now(); //Returns number of milliseconds passed since January 1st 1970
+//Creating Date Objects Manually
+
+const date = new Date(Year, Month, Date, Hour, Minutes, Seconds, MilliSeconds);
+date.getMonth();
+date.getYear();
+date.getDay();
+date.getHours();
+date.setMonth(8); //August
+
 ```
 
