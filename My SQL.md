@@ -83,5 +83,77 @@ BACKUP DATABASE "databaseName"
 TO DISK = 'filepath';
 #Delete Database
 DROP DATABASE "databaseName";
-
 ```
+
+# Database Design
+*How Should we design databases?*
+1. `Schemas` (How data should be logically organized)
+2. `Normalization` (Minimal Dependency and Redundancy)
+3. `Views` (Join Queries)
+4. `Access Control` (Should All Users have same access Level?)
+5. `DBMS` (SQL or Non-SQL)
+
+## Approaches to Processing Data
+*Helps design how data will flow, processed and stored*
+1. `OLTP` (Online Transaction Processing)
+2. `OLAP` (Online Analytical Processing)
+
+OLTP focus on supporting day to day operations while OLAP tasks are vaguer and focus in business decision making.
+
+ |         |OLTP | OLAP|
+ |------|-------|-------|
+ |Purpose |  support daily transactions |report and analyze data|
+ |Design|application-oriented|subject-oriennted|
+|Data|up-to-date, operational|consolidated,historical|
+|Size| Snapshot, gigabytes| archive,terabytes|
+|Queries| simple transactions & frequent updates| complex, aggregate queries & limited updates|
+| Users| Thousands|Hundreds|
+
+
+* Figure Out Business Requirements
+* OLTP Design or OLAP Design or both
+
+### Storing of Data
+1. Structured Data (*Follow a Schema, Defined Types and RelationShips with concepts like foriegn keys*)
+2. Unstructured Data (SchemeLess, Most of Data in world like photos, chat logs, mp3)
+3. Semi-Structured Data (Don't Have a Large Schema, Show some Structure)
+
+**Structured Data:** Easy to Analyze, More Flexibility and Scalability but not very flexible because it follows a schema
+
+* Tradational Databases (OLTP)
+* Data Warehouses (OLAP)
+* Data Lakes (For analyzing big data)
+
+## Data Warehouses
+* Optimized For Read-Only analytics 
+	 * Organized for reading/aggregating data
+	 * Usually Read Only
+* Contains Data from multiple Resources
+* Massively Parallel Processing
+* Dimensional Modeling and Denormalized Schema
+ 
+ Amazon Redshift
+ Azure SQL Data Warehouse
+ Google Big Query
+
+### Data Marts
+* Subset of Data Warehouse
+* Dedicated to a Specific Topic
+  
+## Data Lakes
+* Stores all types of data at a lower cost
+* Retain all data and can take up petabytes
+* Schema on-read as opposed to Schema on-write
+* Need to catalog data otherwise becomes a data swamp
+*Data Lakes are used for analysis for machine learning and data discovery as the data is not very clean*
+
+## Data Flows:
+1. ETL (Extract Transform Load) -> Data Warehouses and Small scale analytics
+2. ELT (Extract Load Transform) -> Big Data Projects, Data Lakes
+
+
+
+
+
+
+

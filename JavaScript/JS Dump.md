@@ -277,6 +277,34 @@ date.getYear();
 date.getDay();
 date.getHours();
 date.setMonth(8); //August
-
 ```
 
+
+# Data Structures:
+In Java Script we don't have any class of Stack to intentiate, however we can use Arrays to implement stacks:
+### Stack:
+*First In Last Out*
+```JS
+const stack = [];
+stack.push(1);
+stack.push(2);
+console.log(stack.pop()); //Gives last pushed element
+```
+### Queues:
+*First In First Out*
+```JS
+const queue = [];
+queue.push(1);
+queue.push(2);
+console.log(queue.shift()); //Give First In Element
+```
+
+### Maps or Dictionaries:
+*Stores key Value Pairs*
+```JS
+const map = new Map();
+map.set('Name', 'Zohaib');
+map.set('Age', 20);
+console.log(map.get('Name'));
+map.size //returns size not a function but property
+```
