@@ -83,6 +83,17 @@ BACKUP DATABASE "databaseName"
 TO DISK = 'filepath';
 #Delete Database
 DROP DATABASE "databaseName";
+SHOW DATABASES;
+USE "databaseName";
+
+CREATE table employees(
+id int,
+firstname varchar(255),
+lastname varchar(255),
+email varchar(255)
+);
+
+DROP TABLE "tablename";
 ```
 
 # Database Design
@@ -150,6 +161,21 @@ OLTP focus on supporting day to day operations while OLAP tasks are vaguer and f
 ## Data Flows:
 1. ETL (Extract Transform Load) -> Data Warehouses and Small scale analytics
 2. ELT (Extract Load Transform) -> Big Data Projects, Data Lakes
+
+## Database Design
+* How Data is logically Stored?
+* How Data is going to be read and updated?
+There are two important concepts when it comes to design
+1. Models(*High Level Specifications for Database Structures*)
+   * Relational Model (*Most Popular*)
+   * NoSQL Model
+   * Object-Oriented Model
+   * Network Model  
+2. Schemas (*Blueprints of Databases*)
+
+
+
+ 
 
 
 
