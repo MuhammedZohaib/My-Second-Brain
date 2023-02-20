@@ -307,4 +307,113 @@ map.set('Name', 'Zohaib');
 map.set('Age', 20);
 console.log(map.get('Name'));
 map.size //returns size not a function but property
+map.has("key here");
+map.delete("key here");
+map.clear();
+map.keys();
+map.values();
+
+
+for ([key, value] of map){
+	console.log(key, value);
+}
+map.forEach((value, key) => {
+	console.log(key,value);
+})
+
+const iter = map.entries();
+console.log(iter.next().value); //returns one key-value pair at a time
+
+//We can also pass a 2D array in map constructor This will instantiate the map
+//with the provided values
+const map = new Map([['test'], 123],[10,'ten'],['name','zohaib']);
 ```
+
+### Sets
+
+```JS
+const set = new Set();
+set.add(123);
+set.add(456);
+//OR
+const set = new Set([123,456);
+//Has no get methods because there is no key to get so we only check wether the value 
+//is present or not
+console.log(set.has("value here"));
+/*In case if we looking for an object in the map we'll likely to store the object first and then check it beacuse in this method it checks the object by reference and not by only values even if we pass two anonymous empty objects it'll return false*/
+
+set.add({});
+console.log(set.has({})); //false
+
+const obj = {};
+set.add(obj);
+console.log(set.has(obj)); //true
+
+//methods
+set.delete();
+
+//Iterating
+for (value of set){
+console.log(value);
+}
+
+set.forEach(value => console.log(value));
+
+const iter = set.values();
+console.log(iter.next());
+
+//Set don't have any duplicates in it so we can use sets to remove duplicates
+const array = [1,2,3,4,5,5,2];
+console.log(Array.from(new Set(arr)));
+
+//Weak Sets
+const weakSet = new WeakSet(); //we can only add objects in a weak Set
+/*We set doesn't prevent garbage collection, If the object is garbage collected then that object is simply removed from the weakSet. No actual way to iterate through them or check their size.*/
+weakset.has();
+weakset.size; //returns undefined
+```
+
+### Implementing a Linked List
+
+```JS
+class Node{
+	constructor(value){
+		this.value = value;
+		this.next = null;
+	}
+}
+class LinkedList {
+	constructor(){
+		this.head = null;
+	}
+	addStart(value){
+		const node = new Node(value);
+		const tempHead = this.head;
+		this.head = node;
+		node.next = tempHead;
+	}
+	addEnd(value){
+		const node = new Node(value);
+		let curr = this.head;
+		if (curr == null){
+		this.head = node;
+		return;
+		}
+		while(curr !=  null && curr.next != null){
+			curr.next = node;
+		}
+	}
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+

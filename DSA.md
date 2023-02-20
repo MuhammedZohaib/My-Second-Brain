@@ -74,3 +74,6 @@
 * Queue
 * Hash Table
 * Tree
+* `Sets`
+* `Maps`
+
