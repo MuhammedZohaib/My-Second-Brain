@@ -165,13 +165,76 @@ OLTP focus on supporting day to day operations while OLAP tasks are vaguer and f
 ## Database Design
 * How Data is logically Stored?
 * How Data is going to be read and updated?
+
 There are two important concepts when it comes to design
-1. Models(*High Level Specifications for Database Structures*)
+1. `Models(High Level Specifications for Database Structures)`
    * Relational Model (*Most Popular*)
    * NoSQL Model
    * Object-Oriented Model
    * Network Model  
-2. Schemas (*Blueprints of Databases*)
+2. `Schemas (Blueprints of Databases)`
+   * Define tables, fields, relationships,indexes and views
+   * Schemas must be followed while data insertion
+
+The first step of database design is defining a model, this is the abstract phase of database design. There are three levels to a data model.
+1. Conceptual data model (describe entites and relationship)
+2. Logical data model (define or map tables columns and relationships)
+3. Physical data model (describes physical storage)
+
+Beyond Realtional Modeling we also have Dimensional Modeling. It is an adaption to relational modeling for data design. It is more like optimized for OLAP queries: aggregate data, not updating data. Built using Star Schema. 
+
+In Dimensional Modeling we have two types of tables 
+	1. Facts Table (Business use case, Updated regularly, connects to dimension table via foriegn keys)
+	2. Dimension Table (hold attributes, does not changed often)
+
+## Example of schema:
+
+| runs|           |
+|------|-------|
+|duration_mins| float|
+|week|int|
+|month|varchar(160)|
+|park_name|varchar(160)|
+|city_name|varchar(160)|
+|distance_km|float|
+|route_name|varchar(160)|
+
+## Creating Table Example:
+```sql
+-- Create a route dimension table
+CREATE TABLE route (
+    route_id INTEGER PRIMARY KEY,
+    park_name VARCHAR(160) NOT NULL,
+    city_name VARCHAR(160) NOT NULL,
+    distance_km FLOAT NOT NULL,
+    route_name VARCHAR(160) NOT NULL
+);
+-- Create a week dimension table
+CREATE TABLE week(
+    week_id INTEGER PRIMARY KEY,
+    week INTEGER NOT NULL,
+    month VARCHAR(160) NOT NULL,
+    year INTEGER NOT NULL
+);
+```
+
+### SUM AVG COUNT
+
+```sql
+SELECT SUM(duration_mins) from run;
+SELECT AVG(mins) from day_time;
+SELECT count(people) from candidates;
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
