@@ -53,6 +53,21 @@ If You want to perform mathematical operations use `NUMERIC` or `INT` datatypes.
 * `CREATE VIEW` *To save the result of a query for future use*
 * `LIMIT` *To Limit the result set*
 
+```sql
+SELECT 
+UPDATE
+DELETE
+INSERT INTO
+CREATE DATABASE
+ALTER DATABASE
+CREATE TABLE
+ALTER TABLE
+DROP TABLE
+CREATE INDEX
+DROP INDEX
+```
+
+
 
 
 we can select multiple fields with `SELECT` keyword by separating the field names with comma.
@@ -75,7 +90,7 @@ When accessed, views automatically update in response to updates in underlying d
 	* Created by Microsoft
 
 
-```mysql
+```sql
 #Create New Database
 CREATE DATABASE "databaseName";
 #Backup existing Database .bak file extension name 
@@ -94,6 +109,77 @@ email varchar(255)
 );
 
 DROP TABLE "tablename";
+
+create database databaseSysI; --Creating new database
+
+SELECT name from sys.databases; --Viewing Created Databases in SQL Server in My SQL (SHOW DATABASES)
+
+USE master; --Using database 
+
+--Creating a new Table in database we used earlier
+CREATE TABLE persons(
+	userID INTEGER PRIMARY KEY,
+	firstname VARCHAR(256) NOT NULL,
+	lastname VARCHAR(256) NOT NULL,
+	email VARCHAR(256) NOT NULL,
+	dob date
+);
+
+--Viewing tables in a database in SQL Server (SHOW TABLES; in My SQL)
+select name from sys.tables;  
+
+SELECT * from Customer; --Viewing all the data in the persons table
+
+SELECT userID, firstname from persons; --Only viewing desired fields from the table we provide specific field names
+
+SELECT FirstName from Customer where Country = 'Pakistan'; --Selects All the Firstname fields which have Germany as Country
+
+INSERT INTO Customer (FirstName, LastName, City, Country, Phone)
+VALUES ('Zohaib', 'Ali','Lahore', 'Pakistan','08090001'); --In T-SQL we have an attribute known as IDENTITY(seed,Incremental) we cannot insert in IDENTITY Column seed represent
+--first column while incremental is value we want to increment
+
+INSERT INTO Customer (FirstName, LastName, City, Country, Phone)
+SELECT LEFT(ContactName, CHARINDEX(' ',ContactName) - 1), 
+       SUBSTRING(ContactName, CHARINDEX(' ',ContactName) + 1, 100), 
+       City, Country, Phone
+  FROM Supplier
+ WHERE CompanyName = 'Bigfoot Breweries';
+
+ --We can also insert data from other tables using INSERT and SELECT queries together 
+
+INSERT INTO Customer (FirstName, LastName, City,Country, Phone)
+SELECT FirstName, LastName, City,Country, Phone From Customer Where Id=69;
+
+UPDATE Customer SET Phone='0300 0000000' where FirstName='Zohaib'; --updating data, we use where clause to update data of a certain field
+
+DELETE Customer where Id = 91; --Delete a record from a table, Always remember to add a where clause in delete query else all the records will be deleted
+
+--ORDER BY
+SELECT * FROM Customer ORDER BY Country DESC; --Descending order
+	
+SELECT * FROM Customer Where Country IN ('Pakistan', 'Brazil') ORDER BY FirstName;
+
+SELECT * FROM [Order]; --Table Name Order
+
+SELECT OrderDate, CustomerId,TotalAmount from [Order] ORDER BY YEAR(OrderDate);
+
+SELECT Customer.FirstName , Customer.LastName FROM Customer 
+INNER JOIN [Order] ON Customer.Id = [Order].Id;
+
+
+SELECT Customer.FirstName+ ' ' +[Customer].[LastName] AS [Name] from Customer;
+
+SELECT SUM(C.TotalAmount) AS Revenue  FROM [Order] C;
+
+
+SELECT TOP 100 * FROM [Order] ORDER BY YEAR(OrderDate);
+
+SELECT CustomerId from [Order];
+
+SELECT DISTINCT TOP 20 CustomerId from [Order] ORDER BY CustomerId DESC;
+
+
+
 ```
 
 # Database Design
@@ -168,7 +254,7 @@ OLTP focus on supporting day to day operations while OLAP tasks are vaguer and f
 
 There are two important concepts when it comes to design
 1. `Models(High Level Specifications for Database Structures)`
-   * Relational Model (*Most Popular*)
+   * Relational Data Model (*Most Popular*)
    * NoSQL Model
    * Object-Oriented Model
    * Network Model  
@@ -225,9 +311,6 @@ SELECT SUM(duration_mins) from run;
 SELECT AVG(mins) from day_time;
 SELECT count(people) from candidates;
 ```
-
-
-
 
 
 

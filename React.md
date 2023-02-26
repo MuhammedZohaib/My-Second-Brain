@@ -40,3 +40,65 @@ The default file structure of a React app created with `create-react-app` consis
 9.  `src/index.js`: This file is responsible for rendering your React app to the page. It uses the `ReactDOM` library to render the root component of your app inside the `index.html` file.
 
 This is the basic structure of a React app created with `create-react-app`. Of course, your own React app may have a slightly different structure, depending on your specific needs and the packages that you have installed.
+
+```JS
+const App = () =>{
+return React.createElement(
+"div",
+{}
+React.createElement("h1",{},"Hello World")
+);
+};
+
+const Container = document.querySelector("#div");
+const root = ReactDOM.createRoot (container);
+root.render(React.createElement(App));
+```
+
+The above is the Basic rendering process of react but from now on we'll use JSX instead of React.createElement but in the background still the rendering is done as shown above.
+
+## Key Points:
+* Always Capitalize your components
+* A component must return a markup which is result of `React.createElement()`.
+* One way data flow data can be passed from parent to child but not from child to parent this allows debugging alot easier in react
+* `package.json` is where we keep most of our dependecies.
+* Also add a .gitionre
+
+
+```JS
+npm install --save-dev prettier
+//make a .prettierrc file with empty obj {} in project directory
+//Turn on format on save from the vs code settings 
+//Install the prettier extension
+//Also turn on prettier require Config, This will make sure the project which have config file only those project's will be formatted.
+"format": "prettier --write \"src/**/*.{js,jsx}\"" //add in package.json scripts
+```
+
+```JS
+npm install --save-dev eslint eslint-config-prettier
+//Install eslint extension in vscode
+//create a eslintrc.json file in project directory add below JSON in it
+"test": "eslint \"src/**/*.{js,jsx}\" --quiet"
+```
+
+eslintrc.json
+```json
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
+```
+
+

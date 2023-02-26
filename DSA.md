@@ -77,3 +77,11 @@
 * `Sets`
 * `Maps`
 
+
+O(n^2)
+O(n log n)
+O(n)
+O(log n)
+O(1)
+
+	
