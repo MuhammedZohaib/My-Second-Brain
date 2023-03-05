@@ -84,4 +84,16 @@ O(n)
 O(log n)
 O(1)
 
-	
+
+## Stack
+1. Array
+2. Linked List
+
+## Queue
+1. Circular Queue
+2. Double Ended Queue
+3. Single Ended Queue
+4. Priority Queue
+5. With array
+6. With linked List
+

@@ -62,7 +62,9 @@ The above is the Basic rendering process of react but from now on we'll use JSX 
 * A component must return a markup which is result of `React.createElement()`.
 * One way data flow data can be passed from parent to child but not from child to parent this allows debugging alot easier in react
 * `package.json` is where we keep most of our dependecies.
-* Also add a .gitionre
+* Also add a .gitionre and add files and directories which you don't want to push in the repo.
+* Earlier we have been using parcel and web-pack as our build tool but from now on we'll be using vite as our build tool. It is a tool provided by Vue Team.
+* react and react-dom are always released in locked versions means they'll always have the same version 
 
 
 ```JS
@@ -85,7 +87,8 @@ eslintrc.json
 ```json
 {
   "extends": ["eslint:recommended", "prettier"],
-  "plugins": [],
+  "rules": {},
+  "plugins":[],
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module",
@@ -101,4 +104,79 @@ eslintrc.json
 }
 ```
 
+```JS
+npm i -D vite @vitejs/plugin-react//Adding vite to our dev-dependencies
+//as we install vite for our build tool we dont need to add react and react-dom script tags but we need to add <script type="module" src="src/App.jsx"></script> in our code make sure the source file has an extension of jsx else the build tool wont work.
+//Then rename the file App.js to App.jsx
+//Add a vite.config.js file to root project folder
+npm init vite
+```
+
+### vite.config.js
+
+```JS
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+    plugins: [react()],
+    root: "src"
+});
+```
+
+
+```JS
+npm init vite@latest my-react-app --template-react
+```
+
+Earlier we have been using CRA for building react projects but from now on we'll use vite as our build tool for react projects.
+
+
+## Configuring eslint for React
+
+```JS
+//eslint plugins to work with react
+npm install -D eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-plugin-react@latest
+```
+
+## .eslintrc.json for React
+
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
+}
+```
 
