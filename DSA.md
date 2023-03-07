@@ -97,3 +97,9 @@ O(1)
 5. With array
 6. With linked List
 
+### Linked List
+1. Double Ended Linked List (Head and Tail)
+2. Single Ended Linked List (Head Only)
+
+
+

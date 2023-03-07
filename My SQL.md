@@ -320,7 +320,6 @@ SELECT count(people) from candidates;
 
 
 
-
  
 
 
