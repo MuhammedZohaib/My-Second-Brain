@@ -89,5 +89,11 @@ XCHG AX, BX ;Swap values of AX and BX
 ret
 ```
 
+* CARRY
+* ZERO
+* SIGN
+* OVERFLOW
 
+Signed overflow -> overflow flag
+Unsigned overflow -> carry flag 
 

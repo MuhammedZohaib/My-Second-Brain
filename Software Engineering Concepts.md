@@ -30,6 +30,9 @@ In this Step we focus on **What** and not on **How**. The Requirment Document Co
 #### Requirements Vs Specifications
 
 Requirements is the non-technical defination of  something that user requires from the system and it is written in plain words so that even a non-technical person can understand. **No JARGON**
+Requirements are further divided in two types:
+1. Functional Requirements
+2. Non-Functional Requirements
 
 Specifications are basically technical specifications that needs to be done to meet requirements. Just keep it simple we are trying to design it here. We talk about basic constraints of the System. 
 
