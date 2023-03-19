@@ -31,3 +31,10 @@ git log --oneline
 git revert "checksum or commit id"
 
 ```
+
+## Git Commit Messages
+* What Changes were applied
+* Use Present Tense
+* First line Should be max 50 Characters 
+If your message is long don't pass any argument in command just type git commit it'll ask for message in a code editior there you can type long messages.
+

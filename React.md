@@ -137,6 +137,8 @@ Earlier we have been using CRA for building react projects but from now on we'll
 ```JS
 //eslint plugins to work with react
 npm install -D eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-plugin-react@latest
+
+npm install -D eslint-plugin-react-hooks@latest
 ```
 
 ## .eslintrc.json for React
@@ -148,6 +150,7 @@ npm install -D eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "rules": {
@@ -180,3 +183,6 @@ npm install -D eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-
 }
 ```
 
+# Hooks:
+Anytime we see the keyword `use` in JXS it indicates that we are using hooks. 
+All custom hooks are other hooks bundled together.
