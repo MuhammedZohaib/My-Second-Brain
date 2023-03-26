@@ -313,15 +313,60 @@ SELECT count(people) from candidates;
 ```
 
 
+# Stored Procedures
+- Input Parameters
+- Output Parameters
+- Table-Valued Parameters
+
+Stored Procedure is nothing more than a piece of code that repetitively performs a set of task. Stored Procedures are useful because "Write once, Run many times." We can also add complex business logic to our stored procedures. They reduce the amount of network traffic. Another great feature of stored procedures is security. Stored Procedures implements the security as the user doesn't have direct access to tables rather the user interact with database on the basis on stored procedures. It also improves efficiency.
+Stored Procedure is the principle method of database programming.
+Stored Procedures should have unique name though they can have same name if they are in different schemas.
+A cursor is an SQL Server Object that behaves like a for-each loop.
+
+- Do not return lots of result sets in a stored procedure
+- Do not use cursors in Stored Procedures.
+
+There are three T-SQL Statements which allows us to manage stored procedures:
+- CREATE PROCEDURE
+- ALTER PROCEDURE
+- DROP PROCEDURE
 
 
+```mysql
+/*Essence of CREATE PROCEDURE*/ 
+CREATE PROCEDURE <name of procedure>
+(Parameters (optional))
+AS
+BEGIN;
+statement here...
+END;
+```
 
+ALTER PROCEDURE doesn't change permissisons. Permissions are granted via groups or roles.
 
+```mysql
+/*Essence of ALTER PROCEDURE*/ 
+ALTER PROCEDURE <name of procedure>
+(Parameters (optional))
+AS
+BEGIN;
+statement here...
+END;
+```
 
+```mysql
+DROP PROCEDURE [IF EXISTS] <name of Procedure>
+```
 
+The SSMS consider all the code as one batch of code but some DDL require to use their own batch if we use `GO` commands it'll separate split the batch into two separates batchs. 
+Ctrl + Shift + R to update Local Cache of Intellisense of SSMS.
 
- 
-
+```mysql
+IF EXISTS (SELECT 1 FROM sys.procedures WHERE [name] = 'name')
+BEGIN;
+DROP PROCEDURE dbo.SelectOrders;
+END;
+```
 
 
 

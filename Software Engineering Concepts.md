@@ -56,4 +56,24 @@ This model is known as the world machine model. In this model we make a venn dia
 * There also sub-overlapping portions known as `eh` (Enviornment Hidden) ,`ev` (Envioenment Visible) and `sv`  (Software Visible) `sh` (Software Hidden). These are detailed things like these are parts of the environment which are visible and hidden like we have pin number in ATM but it's kept hidden. Enviornment visible are the aspects of the system that are visible to the enviornment. 
 * If You are ever in doubt about gathering requirements then go around with a use case where you'll use that system. How you'll interact with that system. How would you want system to interact.
 
+# Design
+## Software Architecture:
+The very top level design is know as Architechture and the Architect is the link between the idea and reality. Architecture is something that cannot be fixed once implemented. Good programming cannot fix bad architecture. Sometimes we have to scrap a project and start over again in software engineering. Architecture is very very important suppose we make an app later we notice that over server is insecure but the server is our core of application either we have to replace the whole application or abandon the software.
+
+Software Architecture is all about breaking larger system into smaller focused systems.
+- Good Architecture is hard.
+- Maintainable software has good architecture.
+- Architecture mistakes are almost impossible(cost more time and money) to fix once coding is started.
+- Good archiecture allows faster development and smarter task allocation.
+- Allows companies to decide where to buy and where to build.
+- Reduces overall idle time
+- A good architecture avoids problems like merge conflicts.
+- a software with good architecture is easy to debug.
+- 
+
+If you don't focus on architecture you write something thats known as sphaggeti code. 
+
+
+
+
 
