@@ -169,3 +169,45 @@ Linked Lists are bad at searching.
 * 
 
 
+```
+ Node head;  
+ Node tail;  
+int count = 0;  
+  
+  
+public void insertLast(int Data){  
+    Node newNode = new Node(Data);  
+    if(head == null){  
+        head = newNode;  
+        tail = newNode;  
+    }  
+    else{  
+        Node tmp = head;  
+        while (tmp.next != null){  
+            tmp = tmp.next;  
+        }  
+        tmp.next = newNode;  
+        tail = newNode;  
+    }  
+    count++;  
+}  
+public void insertStart(int Data){  
+    Node newNode = new Node(Data);  
+    if(head == null){  
+        head = newNode;  
+        tail = newNode;  
+    }  
+    else{  
+        newNode.next = head;  
+        head = newNode;  
+    }  
+    count++;  
+}
+public void display() {  
+    Node tmp = head;  
+    while (tmp != null){  
+        System.out.print(tmp.getData()+" ");  
+        tmp = tmp.next;  
+    }  
+}
+```

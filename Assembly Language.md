@@ -89,6 +89,33 @@ XCHG AX, BX ;Swap values of AX and BX
 ret
 ```
 
+```
+org 100h
+  
+  
+.data
+ 
+
+.code
+MOV AX, 10
+MOV BX, 5
+MOV CX, 0
+
+Label1:
+        DIV BX
+        MOV CX,AX
+        CMP AX,0 
+        JLE Label1
+        
+        
+        
+
+
+
+
+ret  
+```
+
 * CARRY
 * ZERO
 * SIGN
@@ -96,4 +123,6 @@ ret
 
 Signed overflow -> overflow flag
 Unsigned overflow -> carry flag 
+
+
 
