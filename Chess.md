@@ -1,0 +1,11 @@
+- Wether A position requires a tactical solution or Strategic solution.
+- Don't Play against your natural instincts.
+- Game of chess is about making decisions.
+- Recoginze Strength and weaknesses of your opponent.
+- Be Comfortable and Make your opponent Uncomfortable
+- Practice more and more until you can recoginze patterns.
+- Patterns Reveal Oppurtunity.
+- Timing is everything.
+- Wait for your opponent to make mistakes.
+- If under pressure defend yourself.
+- 

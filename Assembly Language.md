@@ -1,3 +1,14 @@
+Why Assembly Langugae?
+- Hardware Manipulation
+- Access to specialized processor instructions
+- To address critical performance issues
+- Device Drivers
+- Low-level embedded systems
+- Real time systems
+
+# Imp Points
+- Structure is way in which components relate to each other
+- ALU performs the computer's data processing functions
 *  Always stay considerate wether you use hexadecimal or decimal. If we use hexadecimal remember to use `NUMh` at the end.
 * Unsigned means always positive. Signed number means either positive or negative.
 * Data types are word(2 bytes) and byte(8 bits).
@@ -16,10 +27,15 @@
   * Interupts (ISR = Interupt service routine) are user inputs in other words
   * 
 
--> Ax Accumulation Register
--> Bx Base Register 
--> Cx Counter Register
--> Dx Destination/ Data Register
+- Ax -> Accumulation Register
+- Bx -> Base Register 
+- Cx -> Counter Register
+- Dx ->  Destination/ Data Register
+* IP  -> Instruction Pointer
+* SP -> Stack Pointer
+* BS -> Base Pointer
+* SI -> Source Index
+* DI -> Destination Index
 
 * There is possiblity that there will be garbage value in registers.
 * EAX is known as extended register as it is 32 bit but normally its size is 16 bit.
@@ -28,11 +44,7 @@
 * SS -> Stack
 * DS -> Data
 * ES -> Extended
-* IP  -> Instruction Pointer
-* SP -> Stack Pointer
-* BS -> Base Pointer
-* SI -> Source Index
-* DI -> Destination Index
+
   
 * DB -> Declare byte
 * DW -> Declare word
@@ -56,65 +68,7 @@ mov
 4. `DQ` -> 8B
 5. `DT` -> 10B
 
-### Assembly Template
-```
-org 100h
-.data
 
-.code
-
-ret
-```
-
-```
-org 100h ;standard
-
-.data ;data segment
-
-VAR1 DB 0x5A   ;Declaring variable
-VAR2 DW 0xE76F ;Declaring variable
-
-
-.code ;code segment
-
-MOV AL, var1 ;Mov value of var1 into AL
-MOV BX, var2 ;Mov value of var2 into BX
-
-ADD AX, BX  ;ADD AX and BX
-SUB AX, BX  ;SUB BX from AX
-NEG AL      ;negative of AL  
-XCHG AX, BX ;Swap values of AX and BX
-
-
-ret
-```
-
-```
-org 100h
-  
-  
-.data
- 
-
-.code
-MOV AX, 10
-MOV BX, 5
-MOV CX, 0
-
-Label1:
-        DIV BX
-        MOV CX,AX
-        CMP AX,0 
-        JLE Label1
-        
-        
-        
-
-
-
-
-ret  
-```
 
 * CARRY
 * ZERO
@@ -125,4 +79,36 @@ Signed overflow -> overflow flag
 Unsigned overflow -> carry flag 
 
 
+If machine read most significant bit first then this is known as big endian and if it read the least significant bit first then it is known as little endian.
+When little endian reads the data from memory and stores it in register it puts the least significant bit in suppose AH and most significant bit in AL.
 
+For loop in assembly works by moving the number of iterations in CX and LOOP keyword will be used to iterate number of times on a Label. The number of iterations is from the CX register.
+
+# Conversions:
+1. Hexa To Decimal: Multiply each digit from right with 16 and corresponding power and add
+2. Binary To Decimal: Multiply each digit from right with 2 and corresponding power and add
+3. Binary To Octal: Divide Binary number into pairs of three digits and multiply by 2 and corresponding power of 2.
+4. Octal To Binary: Convert every digit of octal into its binary form and then combine all binaries
+5. Binary To Hexa: Divide Binary Into Group of 4 and multiply by 2 and corresponding power of 2
+6. Hexa To Binary: Convert each hexa digit to a 4 digit binary number and cominer all binaries
+
+# Signed And Unsigned:
+- Unsigned Represent magnitude so always positive while signed values are appropriate to represent negative values also.
+- A signed Integer can be positive or negative. The most significant bit is reserverd for sign.
+- 1 as MSB means negative and 0 and MSB means positive.
+- 1's Complement is obtained by replacing 0 by 1 and vice versa.
+- Negative Integers in Computer are stored by 2's complement.
+- Adding 1 to 1's complement gives us 2's Complement.
+- If MSB is one first take 2's complement and then convert to decimal.
+- In HexaDecimal 0-7 represent positive while 8-F represent negative. (subtract 65536 from answer if MSB is 8-F)
+
+# Memory and Address:
+- A memory segment is a block of 2^16 or 64k consecutive memory address.
+- Number of bit in an address depends on the processor.
+- Number of bits in an address represents memory that a processor can access.
+- Size of Data bus is equal to width of memory
+- Each segement has a number and memory is specified by an offset.
+- Physical memory is divided into several block and one block is known as segment
+- 8000:0000 8000 is the segment while 0000 is offset.
+- Logical address = Segment : offset
+- Physical address = Segment * 10 + offset

@@ -183,6 +183,43 @@ npm install -D eslint-plugin-react-hooks@latest
 }
 ```
 
+## React-Icons:
+```js
+npm install react-icons --save
+```
+
 # Hooks:
 Anytime we see the keyword `use` in JXS it indicates that we are using hooks. 
-All custom hooks are other hooks bundled together.
+All custom hooks are other hooks bundled together. We can only use hooks in a function component but not in class components. Custom hooks are basically calling other hooks but as a whole. Every time the component runs the hook must run in same order. We cannot use hooks conditionally or in asynchoronous manner. By convention all hooks start with letter use.
+
+```jsx
+const [currState, setState] = useState(""); //React Hook, DeStructuring is used
+//useState returns an array
+//setState is a function which is used to update the currState.
+```
+
+
+## Making Network Request:
+For making network request in React we use Hook known as `UseEffect`
+Effects are used to do chores which are outside the lifecycle of a react component. Most of the time it's an API request. 
+UseEffect runs everySingle time we re-render our application. 
+
+```js
+useEffect(()=>{
+	requestData();
+},[]); //we can pass an array of dependcies in the useEffect hook so that it runs every time that dependency changes.
+
+async function requestData(){
+	const data = await fetch(`api here`);
+	const json = await data.json();
+}
+```
+
+People are less likely to use UseEffect Hook in their jsx file they make their custom hook and use it separately along with other hooks. Like suppose if you're making more than one network request you would like to use custom hook.
+
+# React Router
+For Multipage we need react router
+
+```js
+npm i react-router-dom@latest
+```
