@@ -65,6 +65,10 @@ The above is the Basic rendering process of react but from now on we'll use JSX 
 * Also add a .gitionre and add files and directories which you don't want to push in the repo.
 * Earlier we have been using parcel and web-pack as our build tool but from now on we'll be using vite as our build tool. It is a tool provided by Vue Team.
 * react and react-dom are always released in locked versions means they'll always have the same version 
+* `UseEffect` is the most buggy and hard part of react. Minimize use of it in your apps.
+* While making an react function component always use Pascal Casing. Also use Pascal naming convention for naming react components.
+* A component cannot return more than one element so we use a div to wrap all the elements and the div acts as the parent element but for solving this issue we are adding an extra component to the app to solve this we use Fragment from react. we can also use empty angle brackets instead of an Fragment.
+* 
 
 
 ```JS
@@ -223,3 +227,34 @@ For Multipage we need react router
 ```js
 npm i react-router-dom@latest
 ```
+
+- BrowserRouter
+- Routes
+- Route
+- Link
+
+
+# React Query:
+React query is used to handle API requests. As we have UseEffect also but it's a better way and less buggy. so we priortize its use instead of `UseEffect`
+
+```js
+npm i @tanstack/react-query@latest
+```
+
+firts we need to instantiate the query provider in our app.jsx
+
+```js
+import {QueryClient, QueryClientProvider} from @tanstack/react-query;
+
+const queryClient = new QueryClient({
+defaultOptions:{
+	queries:{
+		staleTime: Infinity, //How long to store response in cache time is in millis
+		cacheTime: Infinity,
+	},
+},
+})
+```
+
+now move whole app body into `QueryClientProvider` but inside of `BrowserRouter`
+always use a if condition that throws an error in case api request was not successful while using react query.

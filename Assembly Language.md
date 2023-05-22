@@ -25,7 +25,13 @@ Why Assembly Langugae?
   * If the data is greater than 16 bit either the data is discarded or we need to use ES.
   * We must involve a register while using two variables. Memory to memory operations are not performed.
   * Interupts (ISR = Interupt service routine) are user inputs in other words
-  * 
+
+- ADD
+- SUB
+- MPY
+- DIV
+- LOAD
+- STOR
 
 - Ax -> Accumulation Register
 - Bx -> Base Register 
@@ -54,11 +60,36 @@ Why Assembly Langugae?
 * All the arrays we declare in our assembly code will be visible in the var portion of the emulate window.
 
 ### Flags
+6 status flags 3 control flags
 * ZF -> Zero Flag `Either Equal or Not`
+* CF -> Carry Flag 
+* PF -> Parity Flag
+* AX -> Auxiliary Flag
+* SF -> Sign Flag
+* OF -> Overflow Flag
+* TF -> Trap Flag
+* IF -> Interupt Flag
+* DF -> Direction Flag
 
-```assembly
-mov  
-```
+## Carry Flag:
+The Carry Flag is set to 1 when there is a carry out from MSB on addition or there is a borrow into the MSB on subtraction. Also affected by shift and rotate instructions.
+
+## Parity Flag:
+If low byte of a result has even number of one bits then parity flag is 1 in case of odd number of one bits parity flag is 0.
+
+## Auxiliary Flag:
+The Auxiliary Carry Flag is set to 1 if there is a carry out from bit 3 on addition, or a borrow into bit 3 on subtraction.
+
+## Zero Flag:
+Zero Flag is set when the result is zero.
+
+## Sign Flag:
+Sign Flag is one when MSB is 1. It means the result is one.
+
+## Overflow Flag:
+Overflow Flag is one if signed overflow occur, otherwise it is 0.
+
+
 
 ### DataTypes:
 
@@ -112,3 +143,5 @@ For loop in assembly works by moving the number of iterations in CX and LOOP key
 - 8000:0000 8000 is the segment while 0000 is offset.
 - Logical address = Segment : offset
 - Physical address = Segment * 10 + offset
+
+# Type and Variable Declaration:

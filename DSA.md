@@ -166,10 +166,8 @@ peekLast()
 ```
 Linked Lists are bad at searching. 
 * Insertion and deletion is O(1) while searching is O(n) in singly linked list
-* 
 
-
-```
+``` java
  Node head;  
  Node tail;  
 int count = 0;  
@@ -211,3 +209,64 @@ public void display() {
     }  
 }
 ```
+
+# Trees:
+Insertion and Searching is efficient. 
+Every individual element is known as a node. Each node stores actuall data and refrence to the next node.
+
+## Terminologies:
+- `Root`: First Node is known as root node. Every tree must have a root node. It is the origin of a tree. There should be only one root node in any tree.
+- `Edge:` In any tree the connecting link between any two nodes is known as an edge. Tree with N node will have N-1 edges.
+- `Parent:` In a tree, The predecessor of any node is known as Parent Node. "*The node which has a child.*"
+- `Child:` In a tree, the node which is decendant of any node is known as a child. A Parent can have any number of childs in a tree.
+- `Siblings:` In a tree, nodes which belong to same Parent are called as siblings.
+- `Leaf:` The node which does not have a child is known as leaf node. A node with no child. Leaf nodes are also known as external nodes or terminal nodes.
+- `Internal Nodes:` The node which has atleast one child is known as internal node. They are also known as non-terminal nodes.
+- `Degree:` The total number of children of a node is known as it's degree. while the highest degree among all nodes is known as the degree of the tree. 
+- `Level:` The root node is at level 0 similary the childs are on Level 1 and the level keep on increasing.
+- `Height:` The total number of edges from leaf node to a particular node in the longest  
+  path is called as HEIGHT of that Node. The height of root node is said to be the height of the tree. while the height of all leaf nodes is 0.
+- `Depth:` The total number of edges from root node to a particular node is called  
+  as DEPTH of that Node. The total number of edges from root node to a leaf node in the  
+  longest path is said to be Depth of the tree. Depth of root node is 0.
+- `Path:` The sequence of nodes and edges from one node to another is known as path between that two nodes.
+- `Sub-tree:` Every child node forms a sub-tree on it's parent node. Every Parent node forms a sub tree.
+
+## Representations:
+1. List Representation
+2. Left Child - Right Sibling Representation
+
+## Binary Tree:
+Binary tree is a special type of tree data structure in which every node can have a maximum of 2 children. One is known as left child and the other is known as right child. A tree in which every node can have a maximum of two children is called as Binary Tree. Every node can have either 0 children or 1 child or 2 children but not more than 2 children
+
+### Types of Binary Trees:
+- `Strictly Binary Tree`: Every Node must have 2 children or none. Also known as Full-Binary Tree or Proper Binary Tree or 2-Tree.
+- `Complete Binary Tree:` In a complete binary tree each level should have 2^n nodes where n is number of level. At level 2 there should be 4 nodes and 8 nodes at level 3. Also known as Perfect Binary tree.
+- `Extenden Binary Tree:` A binary tree can be converted into Full Binary tree by adding dummy nodes to existing nodes wherever required. The full binary tree obtained by adding dummy nodes to a binary tree is called as Extended Binary Tree.
+
+# Tree as ADT:
+- `size(root)` return the total number of nodes
+- `isEmpty(root)` wether tree is empty or not
+- `root()` returns the root node of tree
+- `parent(node)` returns parent of the node
+- `children(node)` returns list of all childs of node
+- `isInternal(node)` return true if node is not a leaf node 
+- `isExternal(node)` return true if node is a leaf
+- `isRoot(node)` return true if node is a root node
+
+## Binary Tree ADT:
+- `left(node)` returns left child of node
+- `right(node)` returns right child of node
+- `hasLeft(node)` tells if a node has left child or not
+- `hasRight(node)` tells if a node has right child or not
+- `siblings(node)` returns sibling of given node
+
+# Tree Traversals:
+Visiting each node of tree once
+- Breadth First Search (Level Traversal- Complete one level first and then move to the next level) (Queue is used in BFS)
+- Depth First Search 
+  - Pre-Order (Simple DFS) (Node, left, right)
+  - In-Order (Left, Right, Node)
+  - Post-Order (Left, Node, Right)
+
+
