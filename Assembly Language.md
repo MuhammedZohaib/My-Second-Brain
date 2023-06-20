@@ -9,7 +9,7 @@ Why Assembly Langugae?
 # Imp Points
 - Structure is way in which components relate to each other
 - ALU performs the computer's data processing functions
-*  Always stay considerate wether you use hexadecimal or decimal. If we use hexadecimal remember to use `NUMh` at the end.
+*  Always stay considerate whether you use hexadecimal or decimal. If we use hexadecimal remember to use `NUMh` at the end.
 * Unsigned means always positive. Signed number means either positive or negative.
 * Data types are word(2 bytes) and byte(8 bits).
 * Assembler convert Assembly language to machine language while compiler convert HLL to LLL.
@@ -17,14 +17,14 @@ Why Assembly Langugae?
 * Four general purpose registers are `Ax` , `Bx` , `Cx` and `Dx` and each register is 16 bit. we can also use them separate like in two parts (8bits) 
   Ax -> AH , AL
   Bx -> BH, BL
-  * No matter what type of number we take it is always converted to hexadecimal when it reacher cpu.
+  * No matter what type of number we take it is always converted to hexadecimal when it reaches CPU.
   * In emu8086 Keywords are blue and registers are red in syntax.
   * Within one instruction the size of source and destination should be same.
   * Semicolon at the start means the the code is commented.
   * A hexadecimal number must start with a digit and end with h.
   * If the data is greater than 16 bit either the data is discarded or we need to use ES.
   * We must involve a register while using two variables. Memory to memory operations are not performed.
-  * Interupts (ISR = Interupt service routine) are user inputs in other words
+  * Interrupts (ISR = Interrupt service routine) are user inputs in other words
 
 - ADD
 - SUB
@@ -55,7 +55,7 @@ Why Assembly Langugae?
 * DB -> Declare byte
 * DW -> Declare word
 
-* Sometimes we need to remeber the physible intial address.
+* Sometimes we need to remember the physible initial address.
 * Segment Address and Logic address should be same.
 * All the arrays we declare in our assembly code will be visible in the var portion of the emulate window.
 
@@ -121,17 +121,17 @@ For loop in assembly works by moving the number of iterations in CX and LOOP key
 3. Binary To Octal: Divide Binary number into pairs of three digits and multiply by 2 and corresponding power of 2.
 4. Octal To Binary: Convert every digit of octal into its binary form and then combine all binaries
 5. Binary To Hexa: Divide Binary Into Group of 4 and multiply by 2 and corresponding power of 2
-6. Hexa To Binary: Convert each hexa digit to a 4 digit binary number and cominer all binaries
+6. Hexa To Binary: Convert each hexa digit to a 4 digit binary number and combine all binaries
 
 # Signed And Unsigned:
 - Unsigned Represent magnitude so always positive while signed values are appropriate to represent negative values also.
-- A signed Integer can be positive or negative. The most significant bit is reserverd for sign.
+- A signed Integer can be positive or negative. The most significant bit is reserved for sign.
 - 1 as MSB means negative and 0 and MSB means positive.
 - 1's Complement is obtained by replacing 0 by 1 and vice versa.
 - Negative Integers in Computer are stored by 2's complement.
 - Adding 1 to 1's complement gives us 2's Complement.
 - If MSB is one first take 2's complement and then convert to decimal.
-- In HexaDecimal 0-7 represent positive while 8-F represent negative. (subtract 65536 from answer if MSB is 8-F)
+- In Hexadecimal 0-7 represent positive while 8-F represent negative. (subtract 65536 from answer if MSB is 8-F)
 
 # Memory and Address:
 - A memory segment is a block of 2^16 or 64k consecutive memory address.
@@ -144,4 +144,4 @@ For loop in assembly works by moving the number of iterations in CX and LOOP key
 - Logical address = Segment : offset
 - Physical address = Segment * 10 + offset
 
-# Type and Variable Declaration:
+

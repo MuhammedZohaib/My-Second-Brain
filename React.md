@@ -258,3 +258,4 @@ defaultOptions:{
 
 now move whole app body into `QueryClientProvider` but inside of `BrowserRouter`
 always use a if condition that throws an error in case api request was not successful while using react query.
+
