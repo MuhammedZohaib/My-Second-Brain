@@ -8,11 +8,11 @@ Most People Learn The coding part but they are not familiar with the software en
 * 20% of projects fail due to poor development practices.
 * ROIC -> Return on Investment
 * Desiging is important because it can be expanded and collaborated on.
-* If we give 0% upfront time to our project, then our cost overrun(**Time and Money both**) will go to 200% but if we give 10-20% of our time as upfornt time the cost overrun will be brought to 40% and this cost overrun cannot be brought to zero. 30-40% cost overrun is normal for all projects unless the budget is very tight. 
+* If we give 0% upfront time to our project, then our cost overrun(**Time and Money both**) will go to 200% but if we give 10-20% of our time as upfront time the cost overrun will be brought to 40% and this cost overrun cannot be brought to zero. 30-40% cost overrun is normal for all projects unless the budget is very tight. 
 
  
-## Software Development LifeCycle
-There bunch of ways to develop a softwares and these ways are known as models. However below steps are cucial in all models and are important for developing any software.
+## Software Development Life Cycle
+There bunch of ways to develop a software and these ways are known as models. However below steps are crucial in all models and are important for developing any software.
 
 1. Requirement (*What we are building?*)
 2. Design (*How we are going to build it?*) **Important**
@@ -34,14 +34,14 @@ There bunch of ways to develop a softwares and these ways are known as models. H
 
 # Requirement
 `A way of  figuring out the exact specifications of what the software should do or A process for finding out the goals of the System.`
-In this Step we focus on **What** and not on **How**. The Requirment Document Contains All the Project Documents.
+In this Step we focus on **What** and not on **How**. The Requirement Document Contains All the Project Documents.
 
 ***Golden Rule In Engineering*
-"Spending time startegically upfront, reduces cost and time later on".
+"Spending time strategically upfront, reduces cost and time later on".
 
  **Requirements Vs Specifications**
 
-Requirements is the non-technical defination of  something that user requires from the system and it is written in plain words so that even a non-technical person can understand. **No JARGON**
+Requirements is the non-technical definition of  something that user requires from the system and it is written in plain words so that even a non-technical person can understand. **No JARGON**
 Requirements are further divided in two types:
 1. Functional Requirements
 2. Non-Functional Requirements
@@ -96,15 +96,15 @@ This model is known as the world machine model. In this model we make a venn dia
 * If You are ever in doubt about gathering requirements then go around with a use case where you'll use that system. How you'll interact with that system. How would you want system to interact.
 
 ### Waterfall Model:
-Waterfall model is most tradational and very old model. It is also known as `Linear Sequential Life cycle model`. In this model the testing only start once the development is completed due to which many failures and defects are reported at the end so the cost of fixing these issues are very high. 
+Waterfall model is most traditional and very old model. It is also known as `Linear Sequential Life cycle model`. In this model the testing only start once the development is completed due to which many failures and defects are reported at the end so the cost of fixing these issues are very high. 
 In waterfall model each phase must be completed before the next phase begins.
-This model is used where the project is small and there are no uncertain requirements. This model is simple and is easy to understand. Easy to manage due to high rigidity of model. Phases do not overlap one phase at a time. No working software is produced during the life cycle of the software development which means product is at the end of the life cycle. High amounts of risk and uncertainity.
-Not prefered for complex and object oriented projects. Poor model for longterm projects.
+This model is used where the project is small and there are no uncertain requirements. This model is simple and is easy to understand. Easy to manage due to high rigidity of model. Phases do not overlap one phase at a time. No working software is produced during the life cycle of the software development which means product is at the end of the life cycle. High amounts of risk and uncertainty.
+Not preferred for complex and object oriented projects. Poor model for long-term projects.
 This model is no longer used.
 
 - Requirement Gathering
 - System Design
-- Implemetation
+- Implementation
 - Testing 
 - Deployment
 - Maintenance
@@ -206,8 +206,8 @@ It's important to note that the choice of SDLC model depends on various factors,
 # Design:
 Design : How to achieve what is needed?
 All the software specifications are converted into Design Specifications. All Technical details are listed like what technologies to be used, project constraints and team capabilities.
-Most important and difficult part in this stage is that the design should not have any vulnerbilities.
-In this phase software design is prepared from requriement specifications.
+Most important and difficult part in this stage is that the design should not have any vulnerabilities.
+In this phase software design is prepared from requirement specifications.
 System design help us decide system and hardware requirements which help us understand the overall software architecture. New changes can be implemented on very small cost.
 In design phase system testers come up with strategies like what to test and how to test.
 
@@ -216,19 +216,19 @@ In design phase system testers come up with strategies like what to test and how
 
 
 ## Software Architecture:
-The very top level design is know as Architechture and the Architect is the link between the idea and reality. Architecture is something that cannot be fixed once implemented. Good programming cannot fix bad architecture. Sometimes we have to scrap a project and start over again in software engineering. Architecture is very very important suppose we make an app later we notice that over server is insecure but the server is our core of application either we have to replace the whole application or abandon the software.
+The very top level design is know as Architecture and the Architect is the link between the idea and reality. Architecture is something that cannot be fixed once implemented. Good programming cannot fix bad architecture. Sometimes we have to scrap a project and start over again in software engineering. Architecture is very very important suppose we make an app later we notice that over server is insecure but the server is our core of application either we have to replace the whole application or abandon the software.
 
 Software Architecture is all about breaking larger system into smaller focused systems.
 - Good Architecture is hard.
 - Maintainable software has good architecture.
 - Architecture mistakes are almost impossible(cost more time and money) to fix once coding is started.
-- Good archiecture allows faster development and smarter task allocation.
+- Good architecture allows faster development and smarter task allocation.
 - Allows companies to decide where to buy and where to build.
 - Reduces overall idle time
 - A good architecture avoids problems like merge conflicts.
 - a software with good architecture is easy to debug.
 
-If you don't focus on architecture you write something thats known as sphaggeti code. 
+If you don't focus on architecture you write something that's known as sphaggeti code. 
 
 # Phases of Software Development
 1. Requirement Gathering
@@ -244,7 +244,7 @@ Development models are also known as lifecycle models. We select the one specifi
 
 ### How to select the right Software Development Life Cycle Model
 The right SDLC Model Depends on certain factors while making a software.
-- Uncertanity :
+- Uncertainty :
 	- Unclear Technologies: 
 		- Waterfall : 0% chance
 		- V Model :  0% chance

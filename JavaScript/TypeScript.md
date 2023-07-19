@@ -1,4 +1,4 @@
-# Setting Up Development Enviornment
+## Setting Up Development Environment
 
 ```node
 npm install -g typesctipt
@@ -12,11 +12,19 @@ tsc -v //Check Version of typescript compiler
 tsc index.ts //compiling a typescript file
 ```
 
-# Configuring TypeScript Compiler
-We create a typeScript configuration file by using
+### Configuring TypeScript Compiler
 
+We create a typescript configuration file by using
 ```node
 tsc --init
 ```
 
+
+```ts
+//Types
+let price : number = 10;
+let name : string = "lmao";
+let passed : boolean = true;
+let age; //This is type any variable (Avoid declaring any type variables)
+```
 

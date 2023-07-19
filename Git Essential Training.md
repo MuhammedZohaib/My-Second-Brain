@@ -20,13 +20,14 @@ git show "checksum"
 git log -p
 
 git log --graph
+git log --oneline
+
 
 #add a file .gitkeep to keep track of an empty folder
 git restore --stagged "filename"
 
 git restore . #to undo changes
 
-git log --oneline
 
 git revert "checksum or commit id"
 
