@@ -55,19 +55,20 @@ const root = ReactDOM.createRoot (container);
 root.render(React.createElement(App));
 ```
 
-The above is the Basic rendering process of react but from now on we'll use JSX instead of React.createElement but in the background still the rendering is done as shown above.
+The above is the Basic rendering process of react but from now on we'll use JSX instead of `React.createElement` but in the background still the rendering is done as shown above.
 
 ## Key Points:
 * Always Capitalize your components
 * A component must return a markup which is result of `React.createElement()`.
-* One way data flow data can be passed from parent to child but not from child to parent this allows debugging alot easier in react
-* `package.json` is where we keep most of our dependecies.
-* Also add a .gitionre and add files and directories which you don't want to push in the repo.
-* Earlier we have been using parcel and web-pack as our build tool but from now on we'll be using vite as our build tool. It is a tool provided by Vue Team.
-* react and react-dom are always released in locked versions means they'll always have the same version 
+* One way data flow data can be passed from parent to child but not from child to parent this allows debugging a lot easier in react
+* `package.json` is where we keep most of our dependencies.
+* Also add a `.gitignore` and add files and directories which you don't want to push in the repo.
+* Earlier we have been using parcel and web-pack as our build tool but from now on we'll be using `vite` as our build tool. It is a tool provided by `Vue` Team.
+* react and `react-dom` are always released in locked versions means they'll always have the same version 
 * `UseEffect` is the most buggy and hard part of react. Minimize use of it in your apps.
 * While making an react function component always use Pascal Casing. Also use Pascal naming convention for naming react components.
 * A component cannot return more than one element so we use a div to wrap all the elements and the div acts as the parent element but for solving this issue we are adding an extra component to the app to solve this we use Fragment from react. we can also use empty angle brackets instead of an Fragment.
+* Null, Undefined, Objects and Boolean are not rendered by the react
 
 ### My Tech Stack:
 
@@ -145,10 +146,10 @@ export default defineConfig({
 npm init vite@latest my-react-app --template-react
 ```
 
-Earlier we have been using CRA for building react projects but from now on we'll use vite as our build tool for react projects.
+Earlier we have been using CRA for building react projects but from now on we'll use `vite` as our build tool for react projects.
 
 
-## Configuring eslint for React
+## Configuring `eslint` for React
 
 ```JS
 //eslint plugins to work with react
@@ -157,7 +158,7 @@ npm install -D eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-
 npm install -D eslint-plugin-react-hooks@latest
 ```
 
-## .eslintrc.json for React
+## `.eslintrc.json` for React
 
 ```json
 {
@@ -200,13 +201,14 @@ npm install -D eslint-plugin-react-hooks@latest
 ```
 
 ## React-Icons:
+
 ```js
 npm install react-icons --save
 ```
 
 # Hooks:
 Anytime we see the keyword `use` in JXS it indicates that we are using hooks. 
-All custom hooks are other hooks bundled together. We can only use hooks in a function component but not in class components. Custom hooks are basically calling other hooks but as a whole. Every time the component runs the hook must run in same order. We cannot use hooks conditionally or in asynchoronous manner. By convention all hooks start with letter use.
+All custom hooks are other hooks bundled together. We can only use hooks in a function component but not in class components. Custom hooks are basically calling other hooks but as a whole. Every time the component runs the hook must run in same order. We cannot use hooks conditionally or in `asynchoronous` manner. By convention all hooks start with letter use.
 
 ```jsx
 const [currState, setState] = useState(""); //React Hook, DeStructuring is used
@@ -216,9 +218,10 @@ const [currState, setState] = useState(""); //React Hook, DeStructuring is used
 
 
 ## Making Network Request:
+
 For making network request in React we use Hook known as `UseEffect`
 Effects are used to do chores which are outside the lifecycle of a react component. Most of the time it's an API request. 
-UseEffect runs everySingle time we re-render our application. 
+`UseEffect` runs `everySingle` time we re-render our application. 
 
 ```js
 useEffect(()=>{
@@ -266,6 +269,35 @@ defaultOptions:{
 	},
 },
 })
+
+
+export interface CardProps {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+  rating?: any;
+}
+
+const apiClient = axios.create({
+  baseURL: "https://fakestoreapi.com",
+});
+
+const Products = () => {
+  const obj = useQuery({
+    queryKey: ["products"],
+    queryFn: async () => {
+      try {
+        const response = await apiClient.get<CardProps[]>("/products");
+        return response.data;
+      } catch (error) {
+        throw new Error("Failed to fetch products");
+      }
+    },
+  });
+
 ```
 
 now move whole app body into `QueryClientProvider` but inside of `BrowserRouter`
@@ -436,6 +468,87 @@ export default Form;
 
 ```
 
+## `useCallBack` Hook
+
+This hook is used to memorize a function. 
+`useCallBack` Hook is used to wrap the functions in the react as we know that
+
+```ts
+{} === {} //false
+```
+
+so to maintain the referential identity of a function we wrap it using `useCallBack` Hook and we also provide a dependency array so that it only re-renders when the elements in dependency array changes else on every component re-render a new copy of the function will be created even if the values in the function do not change.
+
+```ts
+import {useCallBack} from "React";
+
+const num1: number = 0;
+const num2: number = 1;
+
+const sum => useCallBack((): number => num1 + num2, [num1, num2]);
+
+```
+
+## `useReducer` Hook
+
+Another way to manage state in react other than `useState` is `useReducer` Hook.
+
+```ts
+
+const reducer = (state, action, payload) =>{
+	switch(action.type){
+		case 'increment':
+			return {...state, count: state.count + 1};
+		case 'decrement':
+			return {...state, count: state.count - 1};
+		default:
+			throw new Error("Unxecpected Action Dispatched");
+	
+	}
+} 
+
+const [state, dispatch] = useReducer(reducer, {count: 0})
+
+
+```
+
+When we talk about type script we need a `enum` for `actiontypes` an interface for `stateTypes` and an interface for payload.
+
+## `useLayoutEffect` Hook
+
+`useEffect` and `useLayoutEffect` both have same purpose like they are used for code which have effects when a dependency changes in their dependency array. But the main difference is that the `useEffect` is asynchronous while `useLayoutEffect` is synchronous. For 99% we'll use the `useEffect` Hook but we'll use `useLayout` Hook when we want to paint the DOM first in case we see flashes on the screen we'll use `useLayoutHook`.
+
+
+## `useImperativeHandle` Hook
+
+For using `useImperativeHandle` Hook we also need to use `useRef` Hook. This type of hook is used to trigger the function defined in the child component which is defined in the parent component.
+But the `useImperativeHandle` hook is defined in the child component.
+
+we must also use `useForward` Hook in order to utilize the functionality of the `useImperativeHandle` Hook 
+
+```tsx
+import {useRef} from 'React';
+
+
+
+
+const openModal() =>{
+	modelRef.current.openModal();
+}
+
+const ParentComponent() =>{
+const modelRef = useRef(null);
+return(<main>
+	<p>Parent Component</p>
+	<Modal ref={modelRef}></Modal>
+	<button onClick={openModal}>Open Modal</button>
+
+</main>)
+}
+
+```
+
+ 
 ## Chakra UI
 
 ```js
@@ -470,7 +583,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 import {Admin, Resource} from 'react-admin'
 ```
 
-
+ 
 ## Libraries for Backend Setup:
 
 ```js
@@ -576,3 +689,4 @@ type myTypes ={
 style?: React.CSSProperties,
 }
 ```
+

@@ -1,30 +1,34 @@
-# ES6 Modules:
+	# ES6 Modules:
 * Classes
 * Arrow Functions
 * Variables
 * Array Methods
-* Destructuring
+* DE structuring
 * Modules
 * Ternary Operator
-* Spread Opetator
+* Spread Operator
 
 
 
 
-# -----Arrow Functions-----
+# Arrow Functions
 
- These are compact alternative to a tradational function.
+ These are compact alternative to a traditional function.
  Represented by " => ".
  If you have no arguments you don't need any brackets before arrow function however if you have more then one arguments then we can enclose them in parenthesis.
-# ----Nested Functions----
+ 
+# Nested Functions
 Functions Inside other functions.
 Outer Functions have access to inner functions.
 Inner Functions are "hidden" from outside Outer functions.
 Used in closures. 
 They add data security.
-# ----Map----
-An object that holds key-value pairs of any data type
-# ----Object----
+
+
+# Map
+An object that holds key-value pairs of any data type.
+
+# Object
 A group of properties and methods.
 
 Properties = What an object has in it.
@@ -71,7 +75,7 @@ we usually use . notation to access properties/methods.
 	car.brake();
 ```
 
-# ----This Keyword----
+# This Keyword
 
 Gives reference to a particular object.
 The object depends on the immediate context.
@@ -101,7 +105,7 @@ The object depends on the immediate context.
 	};
 ```
 
-# ----Class----
+# Class
 A class is  blueprint for creating objects.
 Defines what properties and methods they have use a constructor for unique properties.
 
@@ -133,7 +137,7 @@ Defines what properties and methods they have use a constructor for unique prope
 
 ```
 
-## ----Constructors----
+# Constructors
 a special method of a class
 accepts arguments and assigns properties
 
@@ -171,7 +175,7 @@ class Students{
 
 ```
 
-# ----Static Keyword----
+# Static Keyword
 A member that is static belongs to a class and not to the objects.
 properties : useful for caches, fixed-configurations.
 methods : useful for utility functions.
@@ -201,7 +205,7 @@ methods : useful for utility functions.
 	Car.startRace();
 ```
 
-# ----Inheritance Property----
+# Inheritance Property
 
 A child class can inherit all the methods and properties from another class known as a parent class.
 
@@ -250,8 +254,8 @@ A child class can inherit all the methods and properties from another class know
 ```
 
 
-# ----Super Keyword----
-Refers to the parent class.commonly used to invoke the constructor of a parent class.
+# Super Keyword
+Refers to the parent class commonly used to invoke the constructor of a parent class.
 
 ## Example:
 ```JS
@@ -290,7 +294,7 @@ Refers to the parent class.commonly used to invoke the constructor of a parent c
 ```
 
 
-# ----Get Keyword----
+# `Get Keyword`
 get binds an object property to a function when that property is accessed.
 
 ## Example:
@@ -311,13 +315,13 @@ get binds an object property to a function when that property is accessed.
 ```
 
 
-# ----Anonymous Objects----
+# `Anonymous Objects`
 These are the objects without any name.
-Not directly refrenced.
+Not directly referenced.
 Less syntax. No need for Unique names. We make a class and a constructor then we make an arrays in which we have our objects by using array methods we can access these objects.
 These can't be accessed directly.
 
-# ----Error----
+# `Error`
 These are the objects with description of something went wrong.
 
 * Can't Open a file
@@ -342,8 +346,9 @@ These are the objects with description of something went wrong.
 		}
 
 ```
-# ----Set Timeout()----
-Invokes a Function  after a number of miliseconds.
+
+# `Set Timeout`
+Invokes a Function  after a number of milliseconds.
 
 ```JS
 	let time1 = setTimeout(firstMessage, 3000); /*when we use timeout it 
@@ -365,7 +370,7 @@ Invokes a Function  after a number of miliseconds.
 ```
 
 
-# ----setInterval()----
+# `setInterval`
 Invokes a function repeatedly after an interval of time.
 It's a asynchronous function means it doesn't pause the execution of your function.
 
@@ -386,7 +391,7 @@ It's a asynchronous function means it doesn't pause the execution of your functi
 	} 
 ```
 
-# ----Date Object----
+# Date Object
 The date object is used to work with date and times
 
 ```JS
@@ -407,6 +412,7 @@ The date object is used to work with date and times
 	console.log(date);
 
 ```
+
 ## Making A Clock In JS:
 ```JS
 	const myLabel = document.getElementById('clock');
@@ -432,14 +438,14 @@ The date object is used to work with date and times
 	}
 	function formatZeros(time){
 		time = time.toString();
-		return time.lenght < 2 ? "0" : time;
+		return time.length < 2 ? "0" : time;
 	}
 	}
 ```
 
 
-# ----Synchronus & Asynchronus----
-**Synchronus Code** = In ordered sequence, Step by step linear Instructions (start now, finish now)
+# Synchronous & Asynchronous
+**Synchronous Code** = In ordered sequence, Step by step linear Instructions (start now, finish now)
 **Asynchronus Code** = Out of Sequence (start now, finish sometime later)
 
 **Synchronus Code Example:**
@@ -459,8 +465,9 @@ The date object is used to work with date and times
 
 ```
 
-# ----console.time()----
-Starts a timer which you can use to track how long an operation takes for a synchronus function.
+# `console.time`
+
+Starts a timer which you can use to track how long an operation takes for a synchronous function.
 
 ```JS
 	console.time(`Response Time`);
@@ -469,9 +476,10 @@ Starts a timer which you can use to track how long an operation takes for a sync
 ```
 
 
-# ----Promises----
-Object that encapsulates the result of an asynchronus operation .
-Let asynchronous method return values like a synchronus methos.
+# `Promises`
+
+Object that encapsulates the result of an asynchronous operation .
+Let asynchronous method return values like a synchronous methods.
 "I promise to return something in the future"
 
 the STATE is 'pending' then: 'fulfilled' or rejected
@@ -500,7 +508,8 @@ It has 2 parts producing and consuming.
 ```
 
 
-# ----async----
+# `async`
+
 It makes a function return a Promise.
 ```JS
 	async function loadFile(){
@@ -517,9 +526,9 @@ It makes a function return a Promise.
 	.catch(error => console.log(error));
 
 ```
-# ----await----
-Make an async function wait for a Promise.
-We can only use await keyword in async function
+# await
+Make an `async` function wait for a Promise.
+We can only use await keyword in `async` function
 
 ```JS
 	async function loadFile(){
@@ -545,7 +554,7 @@ We can only use await keyword in async function
 
 ```
 
-# ----ES6 Modules----
+# ES6 Modules
 The idea behind a module is that it's reusable 
 we can import sections of pre-written code to use whenever we want. These are great for any general utility values and functions.
 Helps to make your code reusable and maintainable.
@@ -565,3 +574,72 @@ Also use export keyword before importing a function into another file.
 ```
 
 
+### Difference between `.map` and `.forEach`
+`.map` method of the array returns a new array and as it returns a new array so other methods can also be chained to it. while the .`forEach` method is used to run a logic on the each element of the array and it returns undefined.
+
+### `.filter` method
+
+The `.filter` method returns the elements of the array which satisfies the a Boolean condition. This method also returns a new array.
+
+
+### Spread Operator
+
+Spread operator was introduced in ES6 and it is used to spread array items and join objects together. 
+
+
+### Testing:
+
+ - e2e (end to end) Testing 
+ - Integration Testing
+ - Unit Testing
+
+e2e Testing Frameworks: *Slow and expensive*
+- WebDriver JS
+- Protractor
+- Cypress
+
+Integration Testing Libraries: *Fast and cheap*
+- Enzyme
+- React Testing library
+
+
+### Testing Libraries
+
+There no built in objects in JS that would allow the tests to run so many third party libraries are used for testing.
+
+- `Jasmine`
+- `Mocha`
+- `Karma`
+- `qUnit`
+- `Jest`
+
+Jest a JS testing framework built and maintained by meta. Besides JS we can test Babel, TS, Node, Angular, `Vue` and various other frameworks with it. It also supports code coverage. Code coverage is the percentage of number of lines covered by testing. Higher the code coverage less is the chance of un-identified bugs.
+
+
+Mocking: Separating code from related dependencies during testing. Mocking is used to make sure our unit test are stand alone
+
+```js
+npm install --save-dev jest
+```
+
+Make new test file as
+
+```
+file.test.js
+```
+
+```js
+const {default: TestRunner} = require("jest-runnner");
+const functionImport = require("./functionModule");
+
+test('expected return', () => {
+	expect(functionImport('params here')).toBe('result');
+})
+```
+
+### Test-Driven Development
+We start by writing a failing test and then we write our code accordingly so that it passes the test.
+Our approach is Red, Green , Refactor.
+
+- Minimizes Regression
+- Proves that new implementation is working

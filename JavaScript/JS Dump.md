@@ -1,5 +1,5 @@
 # Promises
-The concept of promise is that it is an object which contains some value for an asynchorous function. Sometimes we don't know what will be the value of this object so this object has three states.
+The concept of promise is that it is an object which contains some value for an asynchronous function. Sometimes we don't know what will be the value of this object so this object has three states.
 1. Pending
 2. Fulfilled
 3. Rejected
@@ -52,13 +52,13 @@ console.log(tester());
 //The async keyword implicitly returns a promise while the await keyword waits for a promise to be resolved. We can only use await keyword when we are in a async function or at top level of a module. In these cases we also need to handle unresolved or rejected promises for that purpose we use try catch blocks.
 
 async function tester(){
-try{
-await new Promise ((res, rej) => setTimeout(() => res(3), 1000));
-return 3;
-}
-catch (error){
-console.log(error);
-}
+	try{
+		await new Promise ((res, rej) => setTimeout(() => res(3), 1000));
+		return 3;
+	}
+	catch (error){
+		console.log(error);
+	}
 }
 ```
 
@@ -107,9 +107,9 @@ request.send();
 //Also we can use async and await instead of .then chains
 async function main(){
 	try{
-	const response = await fetch(BASE_API);
-	const text = await response.text();
-	console.log(text);
+		const response = await fetch(BASE_API);
+		const text = await response.text();
+		console.log(text);
 	}
 	catch(error){
 		console.log(error);
@@ -123,9 +123,9 @@ response.ok; //returns boolean
 
 async function main(){
 	try{
-	const obj = await fetch(JSON_API);
-	const json = await response.json();
-	console.log(json);
+		const obj = await fetch(JSON_API);
+		const json = await obj.json();
+		console.log(json);
 	}
 	catch(error){
 		console.log(error);
@@ -134,7 +134,7 @@ async function main(){
 main();
 //Some imp mehtods
 JSON.parse('string here'); //returns JSON from a string but string must be in JSON format
-JSON.stringify('JSON here'); //returns Strinf from a JSON format
+JSON.stringify('JSON here'); //returns String from a JSON format
 //sometimes we are not sure what type of response we'll get so in that case we can grab header and look for type of response as:
 console.log(response.headers.get('content-type')); 
 
@@ -165,16 +165,16 @@ async function main(){
 		name: 'Zohaib'	
 	}
 	const options = {
-			method: 'POST',
+		method: 'POST',
 		body: JSON.stringify(data),
 		headers: {
 			'Content-Type': 'application/json; charset-utf-8'
 		}
 	}
 	try{
-	const obj = await fetch(POST_API, options);
-	const json = await response.json();
-	console.log(json);
+		const obj = await fetch(POST_API, options);
+		const json = await response.json();
+		console.log(json);
 	}
 	catch(error){
 		console.log(error);
@@ -184,7 +184,7 @@ main();
 // we can also pass header object as:
 async function main(){
 	const headers = new Headers();
-	headers.apped('Content-Type', 'application/json; charset-utf-8');
+	headers.append('Content-Type', 'application/json; charset-utf-8');
 	
 	const data = {
 		name: 'Zohaib'	
@@ -247,7 +247,7 @@ clearInterval(timerID);
 ```
 
 ### Timeouts
-Timeouts delay the execution of a fucntion like if we want to run a function after a given time frame we'll use Timeouts as:
+Timeouts delay the execution of a function like if we want to run a function after a given time frame we'll use Timeouts as:
 
 ```JS
 setTimeout(() => {
@@ -257,7 +257,7 @@ setTimeout(() => {
 //This also returns a timerID
 ```
 
-### AnimationFrames
+### Animation Frames
 Animation frames work very similar to the `setIntervals` 
 ```JS
 let animationFrameID = requestAnimationFrame("Pass function here recursively");
@@ -368,7 +368,7 @@ console.log(Array.from(new Set(arr)));
 
 //Weak Sets
 const weakSet = new WeakSet(); //we can only add objects in a weak Set
-/*We set doesn't prevent garbage collection, If the object is garbage collected then that object is simply removed from the weakSet. No actual way to iterate through them or check their size.*/
+/*Weak set doesn't prevent garbage collection, If the object is garbage collected then that object is simply removed from the weakSet. No actual way to iterate through them or check their size.*/
 weakset.has();
 weakset.size; //returns undefined
 ```

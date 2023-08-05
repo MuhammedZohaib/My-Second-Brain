@@ -5,7 +5,7 @@ Java How to Program.
 Java Has Object Technology Concept.
 Information Hiding on advance Level.
 
-# Diff. b/w class and obj:
+# Diff. b/w class and object:
 * Drawing a class
 Drawing a class is like making a blueprint for making objects with certain properties and methods. This doesn't allocate any space in memory.
 * Building an Object
@@ -109,7 +109,7 @@ We Can re-use available blocks of code in Java.
 
 ## Instance Variable:
 An _instance variable_ is a variable which is declared in a class but outside of constructors, methods, or blocks.
-Value of the attribute in the object is know as Instance Object.
+Value of the attribute in the object is known as Instance Object.
 
 # Object-Oriented Analysis and Design
 * Code
