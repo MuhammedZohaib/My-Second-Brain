@@ -1,228 +1,191 @@
-Our main goal is database modeling and and development
+# Database Modeling and Development
 
-**Books:**
-* Modern Database Management (11th Edition) 11th Edition by Jeffrey A. Hoffer, Ramesh Venkataraman , Heikki Topi
+Our main goal is database modeling and development, with a focus on understanding key concepts and techniques in this field.
+
+## Recommended Books
+
+* Modern Database Management (11th Edition) by Jeffrey A. Hoffer, Ramesh Venkataraman, Heikki Topi
 * Database Systems: A Practical Approach to Design, Implementation and Management (4th Edition) by Thomas M. Connolly, Carolyn E. Begg
 
-# Database:
-"A shared collection of logically related data and a description of this data, designed to meet the information needs of the organizations"
-Logically related data comprises of entities, attributes and relationships of an organization's information.
+## Introduction to Databases
 
-## DBMS:
-A Software system that enables users to define, create, mantain and controll access to database.
+A **database** is a shared collection of logically related data and a description of this data, designed to meet the information needs of organizations. It consists of entities, attributes, and relationships that represent an organization's information.
 
-## Components of DBMS:
-* Data Defination Language (*DDL*) :  Permits specification of data types, structure and any data constraints. 
-* Data Manipulation Language (*DML*) : General Enquiry Facility of Data.
-* Controlled Access
+### Database Management Systems (DBMS)
 
-# File Systems vs DBMS
-File Basd Systems: "A collection of application programs that perform services for the end-users such as production of reports. Each program defines and manages its own data."
-**One File One Application**
+A **DBMS** is a software system that enables users to define, create, maintain, and control access to a database.
 
-## Limitations of File Based Systems:
-* Separation and Isolation of Data (One Program one File)
-* Data Redundancy
-* Loss of Data Integrity
-* Data Dependence - Data depend on the program
-* Incompatibility of file formats
-* Fixed queries and Little Flexibility
-* Data Abstraction - Separation between data defination and Application program
+#### Components of DBMS
 
-## Organizing Data:
-1. Entity - Distinct Objects e.g person, place or thing
-2. Attribute - Some aspect of the entitiy
-3. Relationship - Association between entities
+* **Data Definition Language (DDL)**: Specifies data types, structure, and constraints.
+* **Data Manipulation Language (DML)**: Allows querying and manipulation of data.
+* Controlled Access: Ensures data security and integrity.
 
-## Components of Database Enviorment
-* Hardware: Servers, PCs
-* Software: DBMS, DDL, DML 
-* Data: Organized in Schema, Divided into Sub-schemas
-* Procedures: Govern the Design, Access and use of Database
-* People: Administrator DBA, Designers, Application Developers and Users.
+## File Systems vs. DBMS
 
-## Advantages of Database Approach:
-* Control on Data Redundancy - Redundancy is minimized not removed at all
-* Data Consistency
-* Greater Information gain from same amount of data as comapared to file based data
-* Data Sharing
-* Improved Data Integrity, Validity and Consistency 
-* Improved Access and Security
-* Enforcement of Standards
-* Economy of Scale, Centralization and Consolidation
-* Balancing of Conflicting Requirements
-* Improved data accessibility and responsiveness
-* Increased Productivity
-* Improved Maintenance through data independence
-* Increased Concurrency
-* Improved Backup and Recovery Services.
+### File-Based Systems
 
-## Disadvantages of Database Approach:
-* The Database approach is more complex and takes more size also we need greater resources for database approach.
-* Cost of DBMS
-* Hardware Cost
-* Cost of Conversion
-* Higher Impact of Failure
-* In production Enviornment, Processing can be slow
+A collection of application programs where each program manages its own data. Limitations include data redundancy, isolation, and data dependence.
 
-# Creating DFD:
-1. Create a list of Activites
-2. Create a context level DFD - Entites and Processess (*Identify Sources and Sinks*)
-3. Constrcut Level 0 DFD - Manageable Sub-processes (*Identify logical Subsytem*)
-4. Construct Level 1 DFD - Actual Data flow and Data Resources (*Identify where to store data*)
-5. Check against Rules of DFD 
+## Organizing Data
 
-## Naming GuideLines:
-* External Entity Should Be Noun 
-* Data flow 
-* Processess should be verb phrase
-* Data Store should be noun
+1. Entity: Distinct objects (e.g., person, place, thing)
+2. Attribute: Characteristics of entities
+3. Relationship: Associations between entities
 
-# Schema and SubSchema:
-Complete Catalog of data stored in the database. (Individual Views are known as Sub-Schemas)
+## Components of a Database Environment
 
-## Three Level Architechture:
-- External Schema (User View of Database)
-- Conceptual Schema (Community View) (What data is stored?)
-- Internal View (Physical Representation) (How data is stored?)
+* **Hardware**: Servers, PCs
+* **Software**: DBMS, DDL, DML
+* **Data**: Organized in schema, divided into sub-schemas
+* **Procedures**: Govern design, access, and use of the database
+* **People**: Administrator DBA, designers, application developers, users
 
-1. Each User should be able to access same data but should have a different  customized view of data.
-2. User should not have to deal directly to physical database.
-3. Database structure should be changeable without affecting the user views.
-4. Changes on high level should not make any changes on low level.
+## Advantages of Database Approach
 
+* Control over data redundancy
+* Data consistency
+* Greater information gain
+* Data sharing
+* Improved data integrity, validity, and consistency
+* Access and security improvement
+* Standards enforcement
+* Economy of scale
+* Increased productivity
+* Data independence and maintenance
+* Increased concurrency
+* Backup and recovery improvements
+
+## Disadvantages of Database Approach
+
+* Complexity and resource requirements
+* Costs (DBMS, hardware, conversion)
+* Impact of failure
+* Slower processing in production environments
+
+# Creating Data Flow Diagrams (DFD)
+
+1. Create a list of activities.
+2. Create a context level DFD (identify sources and sinks).
+3. Construct Level 0 DFD (manageable sub-processes).
+4. Construct Level 1 DFD (actual data flow and data resources).
+5. Check against DFD rules.
+
+### Naming Guidelines
+
+* External entities should be nouns.
+* Data flows and processes should be verb phrases.
+* Data stores should be nouns.
+
+## Schema and Subschema
+
+A **schema** is a complete catalog of data stored in a database. It includes **sub-schemas**, which are individual views of the data.
+
+### Three-Level Architecture
+
+1. **External Schema**: User view of the database.
+2. **Conceptual Schema**: Community view (what data is stored?).
+3. **Internal View**: Physical representation (how data is stored?).
 
 ## Data Independence
-- Logical Data Independence (Changes in external schema doesn't affect conceptual schema)
-- Physical Data Independence (Changes in conceptual schema to changes in internal schema)
+
+- **Logical Data Independence**: Changes in external schema don't affect conceptual schema.
+- **Physical Data Independence**: Changes in conceptual schema don't affect internal schema.
 
 ## Database Languages
-- Data Definition Language
-- Data Manipulation Language
 
-# Models
-- Data Models (DDL, DML, Constraints)
+- Data Definition Language (DDL)
+- Data Manipulation Language (DML)
+
+# Database Models
+
+## Data Models
+
+- DDL, DML, Constraints
 - Database Models
-	- Conceptual Models
-		- Entity Relationship Database Model
-		- Object Oriented Database Model
-	- Implementation Models
-		- Hierarchial Database Model
-		- Network Database Model
-		- Relational Database Model
-		- Object Oriented Database Model
+  - Conceptual Models
+    - Entity-Relationship Database Model
+    - Object-Oriented Database Model
+  - Implementation Models
+    - Hierarchical Database Model
+    - Network Database Model
+    - Relational Database Model
+    - Object-Oriented Database Model
 
+### Hierarchical Database Model
 
-Hierarchical Database Model
+| Pros                                     | Cons                                     |
+| ---------------------------------------- | ---------------------------------------- |
+| Simple structure, easy to understand      | Limited flexibility for complex relations |
+| Fast access to data                      | Data redundancy                          |
+|                                          | Difficulty accommodating hierarchy changes |
 
-| Pros | Cons |
-| --- | --- |
-| Simple structure that is easy to understand and navigate. | Limited flexibility to handle complex relationships. |
-| Fast access to data. | Data redundancy. |
-|  | Difficulty in accommodating changes to the hierarchy. |
+### Network Database Model
 
-Network Database Model
+| Pros                                  | Cons                                           |
+| ------------------------------------- | ---------------------------------------------- |
+| Handles complex relationships         | Complex structure                              |
+| More flexible than hierarchical model | Limited modern DBMS support                    |
+| Fast access to data                   | Difficulty in finding unrelated data           |
 
-| Pros | Cons |
-| --- | --- |
-| Ability to handle more complex relationships. | Complexity of the structure. |
-| More flexible than the hierarchical model. | Limited support from modern database management systems. |
-| Speed of access. | Difficulty in finding data that is not directly related to the starting point. |
+### Relational Database Model
 
-Relational Database Model
+| Pros                                       | Cons                                  |
+| ------------------------------------------ | ------------------------------------- |
+| Simple structure, easy to understand       | Need for understanding normalization |
+| Flexibility for complex relationships      | Performance issues with large data   |
+| Data integrity enforcement                | Limited support for objects          |
+| Widely used and supported                 |                                     |
 
-| Pros | Cons |
-| --- | --- |
-| Simple structure that is easy to understand and maintain. | Need for a sound understanding of data normalization. |
-| Flexibility to accommodate complex relationships. | Performance issues with large datasets. |
-| Ability to enforce data integrity. | Limited ability to handle objects or non-tabular data. |
-| Widely used and supported. |  |
+### Object-Oriented Database Model
 
-Object-Oriented Database Model
+| Pros                                    | Cons                                     |
+| --------------------------------------- | ---------------------------------------- |
+| Handles complex objects and relationships | Lack of standards                        |
+| More flexible than relational model      | Limited modern DBMS support              |
+| Improved performance with large datasets | Difficulty integrating with relational DBs |
+| Supports OOP features (inheritance, polymorphism) | Complex implementation               |
 
-| Pros | Cons |
-| --- | --- |
-| Ability to handle complex objects and relationships. | Lack of standards. |
-| More flexible than the relational model. | Limited support from modern database management systems. |
-| Improved performance with large datasets. | Difficulty in integrating with existing relational databases. |
-| Support for object-oriented programming features such as inheritance and polymorphism. | Complexity of implementation. |
+## Relational Model
 
+- Offers degree of data independence
+- Addresses data semantic, consistency, and redundancy problems
+- Provides set operations through SQL (Structured Query Language)
 
-### Hierarchial Database Model
-- Each Parent Has Many Children
-- Each Children Has only one parent
-- A single table acts as root while other tables branch out from this table
-- Relationship is children and parents
-- TIed together by links
+### Properties of a Relation
 
-
-## Functions of a RDBMS:
-- Data Storage, Retrieval and update
-- User Accessible Catalog
-- Transaction Support
-- Concurrency Control Services
-- Recovery Services
-- Authorization Services
-- Data Communication
-- Integrity Services
-- Services to promote data independence
-
-Query -> Transaction -> Journal -> Buffered -> OS
-
-## Metadata 
-Metadata can be defined as data about data or it is the value that leads us to actual data.
-- Technical Metadata (Table, DB names, Tabel size, datatype, values and attributes, foriegn key, primary keys)
-- Business Metadata (Business Rules and Regulations, change in policies, ownership of data)
-- Operational Metadata (Same as Business Metadata)
-- Descriptive Metadata (data about file,folders, book, images etc like title, author, size)
-- Metadata stores names of user authorized to access the DBMS
-- Names of all data items in the database
-- Column names there datatype and constraints on them is Metadata.
-
-# Relational Model
-- Degree of Data Independence
-- Data semantic, consistency and redundancy problems
-- Allows Set of operations throught data manipulation language like SQL
-
-## Properties of Relation
 - Distinct relation name
-- Each cell contain one atomic value
-- Distince attribute value
-- Order of attributes does not matter
+- Each cell contains one atomic value
+- Distinct attribute values
+- Order of attributes doesn't matter
 
-A Tuple is the instance of data in a column like in firstname "Zohaib" is a tuple
+## Identifying Tuples
 
-## Identifying Tuple
-- Super Key (Uniquely identify a tuple)
-- Candidate Key (A super key with no subset)
-- Primary Key (A candidate key which is used to identify tuples uniquely in a relation)
-- Composite Primary Key(Primary Key on Multiple Attributes)
-- Surrogate Key
-- Foriegn Key
+- **Super Key**: Uniquely identifies a tuple
+- **Candidate Key**: Super key with no subsets
+- **Primary Key**: Candidate key used to identify tuples uniquely
+- **Composite Primary Key**: Primary key on multiple attributes
+- **Surrogate Key**: Artificial key introduced for uniqueness
 
 ## Criteria for a Primary Key
-- Attribute remains same over the life of identity (Never Changes)
+
+- Attribute remains the same over the life of identity
 
 ## Relational Integrity
-- Entity Integrity (No attribute of a primary key can be null, Every Tuple should be uniquely identified).
-- Refrencial Integrity 
 
+- **Entity Integrity**: No attribute of a primary key can be null; every tuple uniquely identified.
+- **Referential Integrity**: Relationship between foreign and primary keys maintained.
 
+# Entity-Relationship Diagram (ERD)
 
+An ERD is a visual representation of entities, attributes, and relationships in a system.
 
-# ERD
-An ERD is a visual representation of entities and their relationships that helps to organize and understand complex data. It consists of three main components: entities, attributes, and relationships.
+## Steps to Create an ERD
 
-1. Identify Entities: Begin by identifying the main entities in the system you are designing. An entity is a representation of a real-world object or concept, such as a customer, order, or product.
-
-2. Define Attributes: For each entity, identify the attributes, or characteristics, that are associated with it. For example, a customer entity might have attributes such as name, address, and phone number.
-
-3. Identify Relationships: Examine the relationships between the entities to determine how they interact with one another. Relationships can be one-to-one, one-to-many, or many-to-many.
-
-4. Create a Diagram: Using a diagramming tool, such as Lucidchart or Visio, create a visual representation of the entities, attributes, and relationships. Entities are represented as rectangles, attributes as ovals, and relationships as diamonds.
-
-5. Specify Cardinality: For each relationship, specify the cardinality, or number of entities that can be involved in the relationship. For example, a one-to-many relationship between customers and orders would indicate that each customer can have many orders, but each order is associated with only one customer.
-
-6. Add Additional Details: Include any additional details, such as constraints or business rules, that are relevant to the system design.
-
-7. Refine and Review: Refine and review the diagram to ensure that it accurately represents the relationships and meets the requirements of the system design.
+1. Identify Entities
+2. Define Attributes
+3. Identify Relationships
+4. Create a Diagram
+5. Specify Cardinality
+6. Add Additional Details
+7. Refine and Review

