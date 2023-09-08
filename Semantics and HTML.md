@@ -212,3 +212,98 @@
 	<figcaption><figcaption>
 <figure>
 ```
+
+## Forms and Validations
+
+There are two types of validations:
+
+- Client-Side Validations
+- Server-Side Validations
+
+```html
+<input type="text" required minlength=3 maxlength=12
+```
+
+```css
+input:focus:invalid{
+	border: 1px solid red;
+}
+```
+
+
+```html
+<form>
+	<fieldset id="group1">
+		<label>
+		<input type="radio" name="group1"> Option1
+		</label>
+		<label>
+		<input type="radio" name="group1"> Option2
+		</label>
+		<label>
+		<input type="radio" name="group1"> Option3
+		</label>
+	</fieldset>
+
+</form>
+```
+
+```c
+required
+//text
+maxlength
+minlength
+pattern
+//number range
+min
+max
+//file
+multiple
+```
+
+```
+//supported video types by most browsers
+.mp4
+.webm
+.ogg
+
+//supported audio types by most browsers
+.mp3
+.wav
+.ogg
+
+//supported image tags by most browsers
+.apng
+.avif
+.gif
+.jpeg
+.png
+.svg
+.webp
+```
+
+```html
+<video>
+	<source src="address to a video file" type="video/mp4">
+</video>
+
+<audio>
+	<source src="address to a audio file" type="audio/mpeg">
+</audio>
+```
+
+```html
+<iframe src="" allow="camera 'none'; microphone 'none'" sandbox="" ></iframe>
+
+<!--Sandbox Attributes-->
+allow = "fullscreen"
+allow = "geolocation"
+allow = "camera, microphone"
+allow = "allow-downloads allow-forms allow-modals allow-oreintational-lock"
+allow = "allow-popups allow-presentation allow scripts"
+
+
+
+
+
+```
